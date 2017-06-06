@@ -3,21 +3,22 @@
 <!-- require : halt script where include: only emits warning; -->
 <div class="container-fluid" >
 	<div class="panel panel-default">
-		<div class="panel-heading" style="margin-top:10px;" id="menu">
+		<div class="panel panel-heading" style="margin-top:10px;" id="menu">
 				<h2 class="btn btn-link">BMI TABLE:</h2>
 		</div>
 		<div class="panel panel-body">
 			<div class="table-responsive">
 				<table class="table">
-				<tbody>
-					<tr>
-						<th><h4>BMI</h4></th><th>19</th><th>20</th><th>21</th><th>22</th><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th><th>31</th><th>32</th><th>33</th><th>34</th><th>35</th><th>36</th><th>37</th><th>38</th><th>39</th><th>40</th>
-					</tr>
-					<tr>
-						<th><h4>Height(inches)</h4></th><th colspan="33"><h4 align="center">body weight(pounds)</h4></th>
-					</tr>
-					<tr>
-
+					<thead>
+						<tr>
+						<th>BMI</th><th>19</th><th>20</th><th>21</th><th>22</th><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th><th>31</th><th>32</th><th>33</th><th>34</th><th>35</th><th>36</th><th>37</th><th>38</th><th>39</th><th>40</th>
+						</tr>
+						<tr>
+						<th>Height(inches)</th><th colspan="33"><h4 align="center">body weight(pounds)</h4></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
 						<th>58</th> <td>91</td>
 									<td>96</th>
 									<td>100</td>
@@ -27,10 +28,11 @@
 									<td>124</td><td>129</td>
 									<td>134</td><td>138</td><td>143</td>
 									<td>148</td><td>153</td><td>158</td>
-									<td>162</td><td>167</td><td>172</td><td>177</td>
+									<td>162</td><td>167</td><td>172</td>
+									<td>177</td>
 									<td>181</td><td>186</td><td>191</td>
-					</tr>
-					<tr>
+						</tr>
+						<tr>
 						<th>59</th>	<td>94</td>
 									<td>99</td>
 									<td>104</td>
@@ -212,6 +214,11 @@
 							<td>	216</td>
 							<td>	223</td>
 							<td>	230</td>
+							<td>236</td>
+							<td>	243</td>
+							<td>	249</td>
+							<td>	256</td>
+							<td>	262</td>
 
 
 					</tr>
@@ -232,7 +239,15 @@
 					<td>	216</td>
 					<td>	223</td>
 					<td>	230</td>
-					<td>	236</td></tr>
+					<td>	236</td>
+						<td>243</td>
+						<td>	250</td>
+						<td>	257</td>
+						<td>	263</td>
+						<td>	270</td>
+					</tr>
+
+
       				<tr><th>70</th>	
       				<td>132</td>
       				<td>	139</td>
@@ -250,7 +265,15 @@
       				<td>	222</td>
       				<td>	229</td>
       				<td>	236</td>
-      					<td>243</td> </tr>
+      					<td>243</td>
+						<td>250</td>
+						<td>	257</td>
+						<td>	264</td>
+						<td>	271</td>
+						<td>	278</td>
+
+      					 </tr>
+
 					<tr><th>71</th>
 					<td>	136</td>
 					<td>	143</td>	
@@ -268,7 +291,14 @@
 					<td>	229</td>
 					<td>	236</td>
 					<td>	243</td>
-					<td>	250</td></tr>
+					<td>	250</td>
+					<td>257</td>
+					<td>	265</td>
+					<td>	272</td>
+					<td>	279</td>
+					<td>	286</td>
+					</tr>
+
 						<tr><th>72</th>
 						<td>	140</td>
 						<td>	147</td>
@@ -286,7 +316,13 @@
 						<td>	235</td>
 						<td>	242</td>
 						<td>	250</td>
-						<td>	258</td></tr>
+						<td>	258</td>
+						<td>265</td>
+						<td>	272</td>
+						<td>	279</td>
+						<td>	287</td>
+						<td>	294</td>
+						</tr>
 <tr><th>73</th>
 <td>	144</td>
 <td>	151</td>
@@ -304,7 +340,14 @@
 <td>	242</td>
 <td>	250</td>
 <td>	257</td>
-<td>	265</td></tr>
+<td>	265</td>
+<td>272</td>	
+<td>280</td>
+<td>	288</td>
+<td>	295</td>
+<td>	302</td>
+</tr>
+
 <tr><th>74</th>
 <td>	148</td>
 <td>	155</td>
@@ -318,9 +361,15 @@
 <td>	233</td>
 <td>	241</td><td>	249</td>
 <td>	256</td>
-<td>	264</td><td>	272</td></tr>
+<td>	264</td><td>	272</td>
+<td>280</td>
+<td>	287</td>
+<td>	295</td>
+<td>	303</td>
+<td>	311</td>
+</tr>
 
-					
+
 					</tbody>
 				</table>
 			</div>
@@ -330,3 +379,42 @@
 
 </div>
 <?php include_once('footer.php');?>
+<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+	var table=$('table'),
+		thead=table.find('thead'),
+		fixed_head;
+		the_window=$(window);
+
+		thead.find('td').each(function(){
+
+			var el=$(this);
+			el.css('width',el.width());
+		});
+
+		fixed_head=thead.clone().hide();
+		thead.after(fixed_head);
+
+		fixed_head.css({
+			'position':'fixed',
+			'top':0,
+			
+			'width':thead.width()
+
+		});
+
+		the_window.scroll(function(){
+		if(the_window.scrollTop() > table.offset().top){	
+
+			fixed_head.show();
+
+		}else{
+			fixed_head.hide();
+
+		});
+
+		if(the_window.scrollTop() > (table.offset().top + table.height()) - fixed_head.height()){
+			fixed_head.hide();
+		}
+
+</script>
