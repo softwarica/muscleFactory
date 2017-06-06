@@ -55,30 +55,32 @@
 				 <div class="col-md-4">
 				   <!-- <h3>NISCHAL shrestha</h3>
 				   <p>aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p> -->
-
+				   <div class="card">
 				   <div class="panel panel-default">
 				   	<div class="panel panel-heading" style="background: #72d0f4;">
 				   		<h5 align="center" style="color:white">calculate body mass index:</h5>
 				   	</div>
-				   	<div class="card">
+				   	
 				   	<div class="panel panel-body" style="color: #00bff0;">
 				   		
 				   		<form class="form-horizontal">
 				   		<div class="form-group">
-				   			<label for="height" class="form-label col-sm-5">Height(in feet):</label>
-				   			<div class="col-sm-7">
-				   			<input type="text" class="form-control" placeholder=" enter height" name="height" id="height" />
+				   			<label for="height" class="form-label col-sm-6">Height(in feet):</label>
+				   			<div class="col-sm-6">
+				   			<input type="text" class="form-control" placeholder=" (ft)" name="height" id="height" style="float:left; width:55px"/>
+				   			
+				   			<input type="text" class="form-control" placeholder="inch" name="heightinch" id="heightinch" style="width:55px" />
 				   			</div>
 				   		</div>
 				   		<div class="form-group" style="margin-top:10px;">
-				   			<label for="weight" class="form-label col-sm-5">weight(in kg):</label>
-				   			<div class="col-sm-7">
+				   			<label for="weight" class="form-label col-sm-6">weight(in kg):</label>
+				   			<div class="col-sm-6">
 				   			<input type="text" class="form-control " placeholder=" enter weight" name="weight" id="weight" />
 				   			</div>
 				   		</div>
 				   		<div class="form-group" style="margin-top:10px;">
-				   			<label for="bmi" class="form-label col-sm-5">BMI:</label>
-				   			<div class="col-sm-7">
+				   			<label for="bmi" class="form-label col-sm-6">BMI:</label>
+				   			<div class="col-sm-6">
 				   			<input type="text" class="form-control " placeholder="your BMI..." name="bmi" id="bmi" />
 				   			</div>
 				   		</div>
@@ -89,13 +91,16 @@
 				   		<button class="btn btn-success" onclick="bmiCalculation()">calculate:</button>
 				   	</div>
 				   </div>
+
+
 				 </div>
 				 <div class="col-md-4">
+				 <div class="card">
 				 	<div class="panel panel-default">
 				 	<div class="panel panel-heading" style="background: #72d0f4;">
 				 		<h5  align="center" style="color:white">BMI Categories:</h5>
 				 	</div>
-				 	<div class="card">
+				 	
 				 	<div class="panel panel-body" style="color: #00bff0;">
 				 		
 				 		<p>
@@ -637,7 +642,8 @@
 	function bmiCalculation(){
 		
 		var height=document.getElementById('height').value;	
-		var ftheight=height*0.3084;
+		var heightinch=document.getElementById('heightinch').value;
+		var ftheight=(height*0.3084)+(heightinch*0.0254);
 		var weight=document.getElementById('weight').value;
 
 		var bmi=weight/(ftheight*ftheight);

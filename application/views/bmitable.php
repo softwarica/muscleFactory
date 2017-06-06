@@ -193,6 +193,133 @@
 						<td>	249</td>
 						<td>	255</td>
 					</tr>
+					<tr>
+					<th>68</th>	
+							<td>125</td>
+							<td>	131</td>
+							<td>	138</td>
+							<td>	144</td>
+							<td>	151</td>
+							<td>	158</td>
+							<td>	164</td>
+							<td>	171</td>
+							<td>	177</td>
+							<td>	184</td>
+							<td>	190</td>
+							<td>	197</td>
+							<td>	203</td>
+							<td>	210</td>
+							<td>	216</td>
+							<td>	223</td>
+							<td>	230</td>
+
+
+					</tr>
+					<tr><th>69</th>
+					<td>	128</td>
+					<td>	135</td>
+					<td>	142</td>
+					<td>	149</td>
+					<td>	155</td>
+					<td>	162</td>
+					<td>	169</td>
+					<td>	176</td>
+					<td>	182</td>
+					<td>	189</td>
+					<td>	196</td>
+					<td>	203</td>
+					<td>	209</td>
+					<td>	216</td>
+					<td>	223</td>
+					<td>	230</td>
+					<td>	236</td></tr>
+      				<tr><th>70</th>	
+      				<td>132</td>
+      				<td>	139</td>
+      				<td>	146</td>
+      				<td>	153</td>
+      				<td>	160</td>
+      				<td>	167</td>
+      				<td>	174</td>
+      				<td>	181</td>
+      				<td>	188</td>
+      				<td>	195</td>
+      				<td>	202</td>
+      				<td>	209</td>
+      				<td>	216</td>
+      				<td>	222</td>
+      				<td>	229</td>
+      				<td>	236</td>
+      					<td>243</td> </tr>
+					<tr><th>71</th>
+					<td>	136</td>
+					<td>	143</td>	
+					<td>150</td>
+					<td>	157</td>
+					<td>	165</td>
+					<td>	172</td>
+					<td>	179</td>
+					<td>	186</td>
+					<td>	193</td>
+					<td>	200</td>
+					<td>	208</td>
+					<td>	215</td>
+					<td>	222</td>
+					<td>	229</td>
+					<td>	236</td>
+					<td>	243</td>
+					<td>	250</td></tr>
+						<tr><th>72</th>
+						<td>	140</td>
+						<td>	147</td>
+						<td>	154</td>
+						<td>	162</td>
+						<td>	169</td>
+						<td>	177</td>
+						<td>	184</td>
+						<td>	191</td>
+						<td>	199</td>
+						<td>	206</td>
+						<td>	213</td>
+						<td>	221</td>
+						<td>	228</td>
+						<td>	235</td>
+						<td>	242</td>
+						<td>	250</td>
+						<td>	258</td></tr>
+<tr><th>73</th>
+<td>	144</td>
+<td>	151</td>
+<td>	159</td>
+<td>	166</td>
+<td>	174</td>
+<td>	182</td>
+<td>	189</td>
+<td>	197</td>
+<td>	204</td>
+<td>	212</td>
+<td>	219</td>
+<td>	227</td>
+<td>	235</td>
+<td>	242</td>
+<td>	250</td>
+<td>	257</td>
+<td>	265</td></tr>
+<tr><th>74</th>
+<td>	148</td>
+<td>	155</td>
+<td>	163</td>
+<td>	171</td>
+<td>	179</td>
+<td>	186</td><td>	194</td>
+<td>	202</td>
+<td>	210</td>
+<td>	218</td><td>	225</td>
+<td>	233</td>
+<td>	241</td><td>	249</td>
+<td>	256</td>
+<td>	264</td><td>	272</td></tr>
+
 					
 					</tbody>
 				</table>
