@@ -107,7 +107,10 @@
 							</ul>
 							</p>
 							<hr/>
-							<h3 align="center"><a href="<?php echo base_url();?>welcome/goToBmiTable">BMI table:</a></h3>
+							<div class="class="btn btn-link">
+							<h3 align="center">
+							<a href="<?php echo base_url();?>welcome/goToBmiTable">BMI table:</a>
+							</h3></div>
 				 		</div>
 
 				 	</div>

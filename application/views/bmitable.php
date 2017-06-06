@@ -3,8 +3,8 @@
 <!-- require : halt script where include: only emits warning; -->
 <div class="container-fluid" >
 	<div class="panel panel-default">
-		<div class="panel-heading" style="background:#72d0f4; margin-top:10px;" id="menu">
-				<h2 align="center" style="color:white">BMI TABLE:</h2>
+		<div class="panel-heading" style="margin-top:10px;" id="menu">
+				<h2 class="btn btn-link">BMI TABLE:</h2>
 		</div>
 		<div class="panel panel-body">
 			<div class="table-responsive">

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <div class="panel panel-default" style="margin-top:10px">
   <div class="panel panel-heading">
-<h5 align="center" class="btn btn-link">Member list</h5>
+<h5 class="btn btn-link">Member list</h5>
 
   </div>
 <div class="panel panel-body">
