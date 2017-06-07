@@ -52,7 +52,7 @@ if($memberdetails->num_rows() > 0){
 
 <div class="panel panel-footer">
 <input type="submit" name="btnsubmitedit" value="submit" class="btn btn-success" >
-  <a type="button" href="<?php  echo base_url();?>controlAdmin/goBack" class="btn btn-success">back</a>
+  <a type="button" href="<?php  echo base_url();?>controlAdmin/index" class="btn btn-success">back</a>
 </div>
 </div>
 </form>

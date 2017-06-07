@@ -26,4 +26,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('bmitable');
 	}
+	public function goToAdmin()
+	{
+		$this->load->view('admin/adminPage');
+	}
 }

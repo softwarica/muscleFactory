@@ -30,7 +30,7 @@
 		   <!-- <a class="toggleMenu" href="#">Menu</a> -->
 			 <ul class="nav">
 			   <li class="active"><a href="#">Home</a></li>
-			   <li><a href="#">About</a></li>
+			   <li><a href="<?php echo base_url();?>welcome/goToAdmin">Admin</a></li>
 			   <li><a href="trainers.html">Trainers</a></li>
 			   <li><a href="classes.html">Classes</a>
 

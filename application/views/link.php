@@ -25,15 +25,8 @@
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
 <style type="text/css">
   .card{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}.)}
-#header-fixed {
-    position: fixed;
-    top: 0px; display:none;
-    background-color:white;
-}
-#header-fixed {
-    position: fixed;
-    top: 0px; display:none;
-    background-color:white;
+.thcolor{
+  color: #00bff0 !important;
 }
 </style>
 <title></title>

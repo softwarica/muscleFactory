@@ -8,7 +8,7 @@
 
 <?php echo form_open_multipart('controlAdmin/newMember');?>
 <!-- <form class="" action="<?php echo base_url();?>controlAdmin/newMember" method="post"> -->
-<div class="col-lg-6">
+<div class="col-lg-6" >
            <div class="form-group">
             <label for="mname">Member Name:</label>
             <input type="text" name="mname" class="form-control" id="mname" placeholder="please enter member name" required="required">
@@ -41,7 +41,7 @@
         
 </div>
 <!-- .................................................................... -->
-<div class="col-lg-6">
+<div class="col-lg-6" >
    <div class="form-group">
           <label for="age">Age:</label>
           <input type="text" name="age" class="form-control" id="age" placeholder="please enter member age" required="required">
@@ -74,7 +74,7 @@
     </div>
 
     <div class="panel panel-footer">
-    <input type="submit" name="btnsubmit" value="submit" class="btn btn-success" >
+    <input type="submit" name="btnsubmit" value="submit" onclick="return confirm('Do you want to register member?')" class="btn btn-success center-block" >
     </div>
 </div>
 </form>
