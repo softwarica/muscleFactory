@@ -6,8 +6,9 @@
   </div>
 <div class="panel panel-body">
 
-<!-- <?php echo form_open_multipart('controlAdmin/newMember');?>  -->
-<form class="" action="<?php echo base_url();?>controlAdmin/newMember" method="post" name="myForm">
+<!-- < --><!-- ?php echo form_open_multipart('controlAdmin/newMember');?> 
+<form action="http://localhost/muscleFactory/index.php/controlAdmin/newMember" enctype="multipart/form-data" method="post" accept-charset="utf-8"> -->
+<form class="" action="<?php echo base_url();?>controlAdmin/newMember" method="post" name="myForm" enctype="multipart/form-data" accept-charset="utf-8">
 <div class="col-lg-6" >
            <div class="form-group">
             <label for="mname">Member Name:</label>
@@ -67,9 +68,11 @@
         </div>
     <div class="form-group">
      <label for="contact">Member Contact:</label>
-     <input type="text" name="contact" class="form-control" id="contact" placeholder="please enter member contact" required="required">
+     <input type="text" name="contact" onchange="checkContact()" class="form-control" id="contact" placeholder="please enter member contact" required="required">
     </div>
-
+    <div class="form-group">
+          <span id="contactMessage"></span>
+        </div>
     <div class="form-group">
      <label for="jdate">Join Date:</label>
      <input type="date" name="jdate" class="form-control" id="jdate" placeholder="please enter join date" required="required">
@@ -190,5 +193,33 @@ function checkHeight(){
         }
 
 }
+
+function checkContact(){
+
+ var contact=document.forms["myForm"]["contact"].value;
+ var contactMessage=$('#contactMessage');
+ if(contact.length < 10){
+
+  document.getElementById('contact').focus();
+             contactMessage.css({
+            'color':'red'
+          });
+document.getElementById('contactMessage').innerHTML='please enter valid mobile number';
+ $(document).ready(function(){
+   
+        $("#btnsubmit").fadeOut()
+    });
+ } else{
+          document.getElementById('contactMessage').innerHTML='';
+
+            $(document).ready(function(){
+   
+        $("#btnsubmit").fadeIn()
+    });
+        }
+
+
+}
+
 
 </script>

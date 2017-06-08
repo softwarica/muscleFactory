@@ -147,5 +147,28 @@ public function viewDetails(){
 	$this->load->view('admin/memberdetails',$data);
 }
 
+public function editPicture(){
+	$config['upload_path']="assets/images/admin";
+		$config['allowed_types']  = 'gif|jpg|png';
+		$config['max-width']="100";
+		$config['max-height']="100";
+
+		$this->load->library('upload',$config);
+		$this->upload->do_upload('userfile');
+		$data=array('upload_data'=>$this->upload->data());
+
+	$id=$this->input->post('id');
+	$image=$data['upload_data']['file_name'];
+
+	$this->load->model('modelAdmin');
+	$this->modelAdmin->updateImage($id,$image);
+
+	$result=$this->modelAdmin->retriveMemberById($id);
+
+	$data['viewdetails']=$result;
+	$this->load->view('admin/memberdetails',$data);
+
+
+}
 }
 ?>

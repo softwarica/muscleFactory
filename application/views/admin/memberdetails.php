@@ -27,6 +27,15 @@ if($viewdetails->num_rows() > 0){
      <tr>
         <th>Member Picture:</th><td><img src="<?php echo base_url();?>assets/images/admin/<?php echo $row->image;?>" class="img-responsive" width="200"/>
         </td>
+        <td>
+        <form class="" action="<?php echo base_url();?>controlAdmin/editPicture" method="post" name="myForm" enctype="multipart/form-data" accept-charset="utf-8">
+        <input type="hidden" name="id" value="<?php echo $row->id;?>"/>
+        <input type="file" name="userfile" id="image" />
+
+        <input type="submit" value="edit" class="btn btn-link" />
+       
+        </form>
+        </td>
     </tr>
      <tr>
      <th>Member Address:</th>
@@ -46,7 +55,7 @@ if($viewdetails->num_rows() > 0){
         </tr>
          <tr>
          <th>Member Age:</th>
-        <td><?php echo $row->age; ?></td>
+        <td><?php echo $row->dob; ?></td>
         </tr>
          <tr>
          <th>Member Weight:</th>

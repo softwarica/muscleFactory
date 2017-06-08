@@ -18,7 +18,7 @@ $arr=array(
 'package'=>$package,
 'bmi'=>$bmi
 );
-echo $dob;
+
 $this->db->insert("tblregister",$arr);
 
 }
@@ -53,8 +53,13 @@ $this->db->where("id",$id);
 $this->db->update("tblregister",$arr);
 }
 
-public function getImage(){
-	
+public function updateImage($id,$image){
+	$arr=array(
+		'id'=>$id,
+		'image'=>$image
+		);
+	$this->db->where('id',$id);
+	$this->db->update('tblregister',$arr);
 }
 }
 ?>
