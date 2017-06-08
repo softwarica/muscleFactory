@@ -58,8 +58,12 @@ if($memberdetails->num_rows() > 0){
           <input type="text" value="<?php echo $row->weight;?>" name="weight" class="form-control" id="weight" placeholder="please enter member weight" required="required">
         </div>
         <div class="form-group">
-          <label for="height">height(in feet):</label>
-          <input type="text" name="height"  value="<?php echo $row->height;?>" class="form-control" id="height" placeholder="please enter member height" required="required">
+          <label for="ftheight">height(feet):</label>
+          <input type="text" name="ftheight"  value="<?php echo $row->ftheight;?>" class="form-control" id="ftheight" placeholder="please enter feet" required="required">
+        </div>
+         <div class="form-group">
+          <label for="heightinch">height(inch):</label>
+          <input type="text" name="heightinch"  value="<?php echo $row->heightinch;?>" class="form-control" id="heightinch" placeholder="please enter inch" onchange="bmiCalculation()" required="required">
         </div>
 <div class="form-group">
  <label for="contact">Member Contact:</label>
@@ -96,3 +100,18 @@ if($memberdetails->num_rows() > 0){
 </div>
 </div>
 <div><?php $this->load->view('footer');?></div>
+<script type="text/javascript">
+  function bmiCalculation(){
+    
+    var ftheight=document.getElementById('ftheight').value; 
+    var heightinch=document.getElementById('heightinch').value;
+    var ans=(ftheight*0.3084)+(heightinch*0.0254);
+    var weight=document.getElementById('weight').value;
+
+    var bmi=weight/(ans*ans);
+    document.getElementById('bmi').value=bmi;
+    // note:.value is normally use for form/input
+    // .innerhtml is used fo div/span
+  }
+
+</script>

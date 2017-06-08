@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ModelAdmin extends CI_Model{
-public function saveMember($mname,$image,$address,$email,$contact,$uname,$pword,$dob,$weight,$height,$jdate,$package,$bmi){
+public function saveMember($mname,$image,$address,$email,$contact,$uname,$pword,$dob,$weight,$ftheight,$heightinch,$jdate,$package,$bmi){
 $arr=array(
 'mname'=>$mname,
 'image'=> $image,
@@ -13,7 +13,8 @@ $arr=array(
 'pword'=>$pword,
 'dob'=>$dob,
 'weight'=>$weight,
-'height'=>$height,
+'ftheight'=>$ftheight,
+'heightinch'=>$heightinch,
 'jdate'=>$jdate,
 'package'=>$package,
 'bmi'=>$bmi
@@ -39,7 +40,7 @@ public function retriveMemberById($id){
 	return $result;
 }
 
-public function updateMember($id,$mname,$address,$email,$contact,$uname,$pword,$dob,$weight,$height,$jdate,$package,$bmi){
+public function updateMember($id,$mname,$address,$email,$contact,$uname,$pword,$dob,$weight,$ftheight,$heightinch,$jdate,$package,$bmi){
 	$arr=array(
 		"id"=>$id,
 		"mname"=>$mname,
@@ -50,7 +51,8 @@ public function updateMember($id,$mname,$address,$email,$contact,$uname,$pword,$
 		"pword"=>$pword,
 		"dob"=>$dob,
 		"weight"=>$weight,
-		"height"=>$height,
+		"ftheight"=>$ftheight,
+		"heightinch"=>$heightinch,
 		"jdate"=>$jdate,
 		"package"=>$package,
 		"bmi"=>$bmi

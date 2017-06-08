@@ -58,12 +58,12 @@ if($viewdetails->num_rows() > 0){
         <td><?php echo $row->dob; ?></td>
         </tr>
          <tr>
-         <th>Member Weight:</th>
+         <th>Member Weight(kg):</th>
         <td><?php echo $row->weight; ?></td>
         </tr>
          <tr>
-         <th>Member Height:</th>
-        <td><?php echo $row->height; ?></td>
+         <th>Member Height(feet.inch):</th>
+        <td><?php echo $row->ftheight; ?>.<?php echo $row->heightinch; ?></td>
         </tr>
          <tr>
          <th>Member Contact:</th>

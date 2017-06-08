@@ -60,12 +60,20 @@
           <span id="weightMessage"></span>
         </div>
         <div class="form-group">
-          <label for="height">height(in feet):</label>
-          <input type="text" name="height" class="form-control" id="height" onchange="checkHeight()" placeholder="please enter member height" required="required">
+          <label for="ftheight">height(feet):</label>
+          <input type="text" name="ftheight" class="form-control" id="ftheight" onchange="checkftHeight()" placeholder="please enter feet" required="required">
         </div>
         <div class="form-group">
-          <span id="heightMessage"></span>
+          <span id="ftheightMessage"></span>
         </div>
+          <div class="form-group">
+          <label for="heightinch">height(inch):</label>
+          <input type="text" name="heightinch" class="form-control" id="heightinch" onchange="checkHeightinch()" placeholder="please enter inch" required="required">
+        </div>
+        <div class="form-group">
+          <span id="heightinchMessage"></span>
+        </div>
+        
     <div class="form-group">
      <label for="contact">Member Contact:</label>
      <input type="text" name="contact" onchange="checkContact()" class="form-control" id="contact" placeholder="please enter member contact" required="required">
@@ -84,7 +92,7 @@
     </div>
       <div class="form-group">
      <label for="bmi">BMI:</label>
-     <input type="text" name="bmi" class="form-control" id="bmi" placeholder="please enter body mass index" required="required">
+     <input type="text" name="bmi" class="form-control" onfocus="bmiCalculation()" id="bmi" placeholder="please enter body mass index" required="required">
     </div>
 
     <div class="panel panel-footer">
@@ -96,6 +104,19 @@
 </div>
 </div>
 <script type="text/javascript">
+  function bmiCalculation(){
+    
+    var ftheight=document.getElementById('ftheight').value; 
+    var heightinch=document.getElementById('heightinch').value;
+    var ans=(ftheight*0.3084)+(heightinch*0.0254);
+    var weight=document.getElementById('weight').value;
+
+    var bmi=weight/(ans*ans);
+    document.getElementById('bmi').value=bmi;
+    // note:.value is normally use for form/input
+    // .innerhtml is used fo div/span
+  }
+
   function checkPassword() {
 
           var pword=document.forms["myForm"]["pword"].value;
@@ -166,17 +187,17 @@ function checkWeight(){
 
 }
 
-function checkHeight(){
+function checkftHeight(){
 
- var height=document.forms["myForm"]["height"].value;
- var heightMessage=$('#heightMessage');//this variable is for css
-          if(height <= 4.8){
+ var ftheight=document.forms["myForm"]["ftheight"].value;
+ var ftheightMessage=$('#ftheightMessage');//this variable is for css
+          if(ftheight <= 4){
             
-            document.getElementById('height').focus();
-             heightMessage.css({
+            document.getElementById('ftheight').focus();
+             ftheightMessage.css({
             'color':'red'
           });
-            document.getElementById('heightMessage').innerHTML='please enter height greater than 4.8 feet';
+            document.getElementById('ftheightMessage').innerHTML='please enter height greater than 4 feet';
              $(document).ready(function(){
    
         $("#btnsubmit").fadeOut()
@@ -184,7 +205,34 @@ function checkHeight(){
 
         }
         else{
-          document.getElementById('heightMessage').innerHTML='';
+          document.getElementById('ftheightMessage').innerHTML='';
+
+            $(document).ready(function(){
+   
+        $("#btnsubmit").fadeIn()
+    });
+        }
+
+}
+
+function checkHeightinch(){
+ var heightinch=document.forms["myForm"]["heightinch"].value;
+ var heightinchMessage=$('#heightinchMessage');//this variable is for css
+          if(heightinch > 12){
+            
+            document.getElementById('heightinch').focus();
+             heightinchMessage.css({
+            'color':'red'
+          });
+            document.getElementById('heightinchMessage').innerHTML='please enter height less than 12 inch';
+             $(document).ready(function(){
+   
+        $("#btnsubmit").fadeOut()
+    });
+
+        }
+        else{
+          document.getElementById('heightinchMessage').innerHTML='';
 
             $(document).ready(function(){
    

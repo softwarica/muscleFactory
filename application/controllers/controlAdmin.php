@@ -43,8 +43,7 @@ public function newMember(){
 	    $this->form_validation->set_rules('pword', 'Password', 'required|trim|min_length[8]|alpha_numeric');
 	    $this->form_validation->set_rules('repword', 'Confirm Password', 'required|trim|matches[pword]');
 
-	   $this->form_validation->set_rules('weight','Weight','required|numeric|greater_than[39]');
-	   $this->form_validation->set_rules('height','hright','required|numeric|greater_than[4]');
+	
 
 	if($this->form_validation->run()==false){
 		
@@ -71,13 +70,14 @@ $uname=$this->input->post('uname');
 $pword=$this->input->post('pword');
 $dob=$this->input->post('dob');
 $weight=$this->input->post('weight');
-$height=$this->input->post('height');
+$ftheight=$this->input->post('ftheight');
+$heightinch=$this->input->post('heightinch');
 $jdate=$this->input->post('jdate');
 $package=$this->input->post('package');
 $bmi=$this->input->post('bmi');
 
 $this->load->model('modelAdmin');
-$this->modelAdmin->saveMember($mname,$image,$address,$email,$contact,$uname,$pword,$dob,$weight,$height,$jdate,$package,$bmi);
+$this->modelAdmin->saveMember($mname,$image,$address,$email,$contact,$uname,$pword,$dob,$weight,$ftheight,$heightinch,$jdate,$package,$bmi);
 
 $data['insertmsg']="data insert successfully";
 $this->load->view('admin/adminPage',$data);
@@ -101,8 +101,24 @@ $data['memberlist']=$result;
 
 
 public function removeMember(){
+
+
 	$this->load->model("modelAdmin");
 	$id=$this->input->get('id');
+	$result=$this->modelAdmin->retriveMemberById($id);
+	if($result->num_rows() > 0){
+		foreach($result->result() as $row){
+				$filename=$row->image;
+				echo $filename;
+				
+				$path=base_url().'assets/images/admin/'.$filename;
+				echo $path;
+				
+				delete_files($path);
+			
+		}
+	}
+
 	$this->modelAdmin->deleteMember($id);
 
 	$data['delete_message']="data successfully delete";
@@ -130,13 +146,14 @@ $uname=$this->input->post('uname');
 $pword=$this->input->post('pword');
 $dob=$this->input->post('dob');
 $weight=$this->input->post('weight');
-$height=$this->input->post('height');
+$ftheight=$this->input->post('ftheight');
+$heightinch=$this->input->post('heightinch');
 $jdate=$this->input->post('jdate');
 $package=$this->input->post('package');
 $bmi=$this->input->post('bmi');
 
 $this->load->model('modelAdmin');
-$this->modelAdmin->updateMember($id,$mname,$address,$email,$contact,$uname,$pword,$dob,$weight,$height,$jdate,$package,$bmi);
+$this->modelAdmin->updateMember($id,$mname,$address,$email,$contact,$uname,$pword,$dob,$weight,$ftheight,$heightinch,$jdate,$package,$bmi);
 
 $data['update_message']="data successfully update";
 $this->load->view('admin/adminPage',$data);
