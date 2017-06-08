@@ -28,6 +28,8 @@
                     <h5>
                   <?php if (isset($_POST['btnsubmit'])) {
                     echo "<script type='text/javascript'>alert('$insertmsg');</script>";
+                    
+                    
                   } else if(isset($_GET['id'])){
                     echo "<script type='text/javascript'>alert('$delete_message');</script>";
                   } else if(isset($_POST['btnsubmitedit'])){

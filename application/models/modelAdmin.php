@@ -2,17 +2,23 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ModelAdmin extends CI_Model{
-public function saveMember($mname,$image,$address,$email,$contact,$jdate,$package){
+public function saveMember($mname,$image,$address,$email,$contact,$uname,$pword,$dob,$weight,$height,$jdate,$package,$bmi){
 $arr=array(
 'mname'=>$mname,
 'image'=> $image,
 'address'=>$address,
 'email'=>$email,
 'contact'=>$contact,
+'uname'=>$uname,
+'pword'=>$pword,
+'dob'=>$dob,
+'weight'=>$weight,
+'height'=>$height,
 'jdate'=>$jdate,
-'package'=>$package
+'package'=>$package,
+'bmi'=>$bmi
 );
-
+echo $dob;
 $this->db->insert("tblregister",$arr);
 
 }

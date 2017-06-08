@@ -27,6 +27,31 @@ $this->load->view('admin/adminPage');
 // }
 
 public function newMember(){
+		//form validation...........................................
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('mname','membername',
+				'required|trim|callback_convert_lowercase');
+	
+		$this->form_validation->set_rules('address','address','required',
+		array('required'=>'please clearify address'));
+
+		 $this->form_validation->set_rules('email', 'Email', 'required|trim|is_unique[tblregister.email]|strtolower');
+	 	$this->form_validation->set_message('is_unique', 'That Email is Already Exists.');
+
+	  $this->form_validation->set_rules('contact','Contact','required|regex_match[/^[0-9]{10}$/]');
+
+	    $this->form_validation->set_rules('pword', 'Password', 'required|trim|min_length[8]|alpha_numeric');
+	    $this->form_validation->set_rules('repword', 'Confirm Password', 'required|trim|matches[pword]');
+
+	   $this->form_validation->set_rules('weight','Weight','required|numeric|greater_than[39]');
+	   $this->form_validation->set_rules('height','hright','required|numeric|greater_than[4]');
+
+	if($this->form_validation->run()==false){
+		
+		echo validation_errors();
+				// .................................................................................
+
+	}else{
 		//for uploading images
 		$config['upload_path']="assets/images/admin";
 		$config['allowed_types']  = 'gif|jpg|png';
@@ -35,27 +60,35 @@ public function newMember(){
 
 		$this->load->library('upload',$config);
 		$this->upload->do_upload('userfile');
-		// 	$error = array( "error" => $this->upload->display_errors());
-		// 	$this->load->view('upload_form', $error);
-		// }else{
-			$data=array('upload_data'=>$this->upload->data());
-			  
-		// }
+		$data=array('upload_data'=>$this->upload->data());
 //------------------------------------
 $mname=$this->input->post('mname');
 $image=$data['upload_data']['file_name'];
 $address=$this->input->post('address');
 $email=$this->input->post('email');
 $contact=$this->input->post('contact');
+$uname=$this->input->post('uname');
+$pword=$this->input->post('pword');
+$dob=$this->input->post('dob');
+$weight=$this->input->post('weight');
+$height=$this->input->post('height');
 $jdate=$this->input->post('jdate');
 $package=$this->input->post('package');
+$bmi=$this->input->post('bmi');
 
 $this->load->model('modelAdmin');
-$this->modelAdmin->saveMember($mname,$image,$address,$email,$contact,$jdate,$package);
+$this->modelAdmin->saveMember($mname,$image,$address,$email,$contact,$uname,$pword,$dob,$weight,$height,$jdate,$package,$bmi);
 
 $data['insertmsg']="data insert successfully";
 $this->load->view('admin/adminPage',$data);
 
+
+	}
+
+}
+
+public function convert_lowercase() {
+  return strtolower($this->input->post('mname'));
 }
 
 public function getMember(){

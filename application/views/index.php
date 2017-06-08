@@ -4,7 +4,7 @@
 <body>
 <?php include('header.php');?>
  
-	<div class="header">
+<!-- 	<div class="header">
 	   <div class="container">
 		  <div class="header-text">
 			<h1>MUSCLE FACTORY</h1>
@@ -18,7 +18,7 @@
 			</div>
 		  </div>
     </div>
-    </div>
+    </div> -->
 
     <div class="menu" id="menu">
 	  <div class="container">
