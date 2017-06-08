@@ -126,11 +126,17 @@ $mname=$this->input->post('mname');
 $address=$this->input->post('address');
 $email=$this->input->post('email');
 $contact=$this->input->post('contact');
+$uname=$this->input->post('uname');
+$pword=$this->input->post('pword');
+$dob=$this->input->post('dob');
+$weight=$this->input->post('weight');
+$height=$this->input->post('height');
 $jdate=$this->input->post('jdate');
 $package=$this->input->post('package');
+$bmi=$this->input->post('bmi');
 
 $this->load->model('modelAdmin');
-$this->modelAdmin->updateMember($id,$mname,$address,$email,$contact,$jdate,$package);
+$this->modelAdmin->updateMember($id,$mname,$address,$email,$contact,$uname,$pword,$dob,$weight,$height,$jdate,$package,$bmi);
 
 $data['update_message']="data successfully update";
 $this->load->view('admin/adminPage',$data);

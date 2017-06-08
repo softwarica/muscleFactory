@@ -39,15 +39,21 @@ public function retriveMemberById($id){
 	return $result;
 }
 
-public function updateMember($id,$mname,$address,$email,$contact,$jdate,$package){
+public function updateMember($id,$mname,$address,$email,$contact,$uname,$pword,$dob,$weight,$height,$jdate,$package,$bmi){
 	$arr=array(
 		"id"=>$id,
 		"mname"=>$mname,
 		"address"=>$address,
 		"email"=>$email,
 		"contact"=>$contact,
+		"uname"=>$uname,
+		"pword"=>$pword,
+		"dob"=>$dob,
+		"weight"=>$weight,
+		"height"=>$height,
 		"jdate"=>$jdate,
-		"package"=>$package
+		"package"=>$package,
+		"bmi"=>$bmi
 		);
 $this->db->where("id",$id);
 $this->db->update("tblregister",$arr);
