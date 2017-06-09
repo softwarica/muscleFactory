@@ -25,18 +25,7 @@
           <div class="menu" >
           <div class="container">
           
-                    <h5>
-                  <?php if (isset($_POST['btnsubmit'])) {
-                    echo "<script type='text/javascript'>alert('$insertmsg');</script>";
-                    
-                    
-                  } else if(isset($_GET['id'])){
-                    echo "<script type='text/javascript'>alert('$delete_message');</script>";
-                  } else if(isset($_POST['btnsubmitedit'])){
-                    echo "<script type='text/javascript'>alert('$update_message');</script>";
-                  }
-
-                   ?></h5>
+                   
                      <a href="<?php echo base_url();?>welcome/index">
               <div class="header-bottom_left">
                 <img src="<?php echo base_url();?>assets/images/logo/logo.png" alt"" class="img-responsive" width="100"/>
@@ -60,7 +49,25 @@
 
            </div>
            </div>
-          
+           <div class="col-lg-12">
+             <h3 align="center" style="color:red;">
+                  <?php if (isset($_POST['btnsubmit'])) {
+                    // echo "<script type='text/javascript'>alert('$insertmsg');</script>";
+                    echo $insertmsg;
+                    
+                    
+                  } else if(isset($_GET['id'])){
+                    // echo "<script type='text/javascript'>alert('$delete_message');</script>";
+                    echo $delete_message;
+                  } else if(isset($_POST['btnsubmitedit'])){
+                    // echo "<script type='text/javascript'>alert('$update_message');</script>";
+                    echo $update_message;
+                  } else if(isset($_POST['btnsubmitimage'])){
+                    echo $image_update;
+                  }
+
+                   ?></h3>
+                   </div>
              <div class="tab-content main" id="menu">
                <div id="home" class="tab-pane fade in active">
                  <?php
@@ -105,6 +112,8 @@
 
                </div>
              </div>
+
+
 
 <div>
   

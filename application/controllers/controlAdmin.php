@@ -109,12 +109,10 @@ public function removeMember(){
 	if($result->num_rows() > 0){
 		foreach($result->result() as $row){
 				$filename=$row->image;
-				echo $filename;
 				
-				$path=base_url().'assets/images/admin/'.$filename;
-				echo $path;
 				
-				delete_files($path);
+				$path='C:/xampp/htdocs/muscleFactory/assets/images/admin/'.$filename;
+				unlink($path);
 			
 		}
 	}
@@ -171,6 +169,8 @@ public function viewDetails(){
 }
 
 public function editPicture(){
+	if(isset($_POST['btnsubmitimage'])){
+
 	$config['upload_path']="assets/images/admin";
 		$config['allowed_types']  = 'gif|jpg|png';
 		$config['max-width']="100";
@@ -179,19 +179,52 @@ public function editPicture(){
 		$this->load->library('upload',$config);
 		$this->upload->do_upload('userfile');
 		$data=array('upload_data'=>$this->upload->data());
-
+		
+		$this->load->model('modelAdmin');
+		
+// for delete of image
 	$id=$this->input->post('id');
+						$result=$this->modelAdmin->retriveMemberById($id);
+	if($result->num_rows() > 0){
+		foreach($result->result() as $row){
+				$filename=$row->image;
+								
+				$path='C:/xampp/htdocs/muscleFactory/assets/images/admin/'.$filename;
+				unlink($path);
+			
+		}
+	}
+// ............................
+
 	$image=$data['upload_data']['file_name'];
 
-	$this->load->model('modelAdmin');
+	
 	$this->modelAdmin->updateImage($id,$image);
 
-	$result=$this->modelAdmin->retriveMemberById($id);
+	// $result=$this->modelAdmin->retriveMemberById($id);
 
+
+	$data['image_update']='image sucessfull update';
+	$this->load->view('admin/adminPage',$data);
+}
+
+
+}
+public function deleteImage(){
+$this->load->model("modelAdmin");
+	$id=$this->input->get('id');
+	$result=$this->modelAdmin->retriveMemberById($id);
+	if($result->num_rows() > 0){
+		foreach($result->result() as $row){
+				$filename=$row->image;
+								
+				$path='C:/xampp/htdocs/muscleFactory/assets/images/admin/'.$filename;
+				unlink($path);
+			
+		}
+	}
 	$data['viewdetails']=$result;
 	$this->load->view('admin/memberdetails',$data);
-
-
 }
 }
 ?>
