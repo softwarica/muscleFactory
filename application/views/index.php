@@ -4,7 +4,7 @@
 <body>
 <?php include('header.php');?>
  
-<!-- 	<div class="header">
+	<div class="header">
 	   <div class="container">
 		  <div class="header-text">
 			<h1>MUSCLE FACTORY</h1>
@@ -18,7 +18,7 @@
 			</div>
 		  </div>
     </div>
-    </div> -->
+    </div>
 
     <div class="menu" id="menu">
 	  <div class="container">
@@ -46,7 +46,7 @@
 	</div>
 	<!-- end menu -->
 	 <div class="main">
-	 	 <div class="container">
+	 	 <div class="container-fluid">
 			<!-- start content-top -->
 			<div class="row content-top">
 				 <div class="col-md-4">
@@ -75,22 +75,22 @@
 				   		<div class="form-group" style="margin-top:10px;">
 				   			<label for="weight" class="form-label col-sm-6">weight(in kg):</label>
 				   			<div class="col-sm-6">
-				   			<input type="text" class="form-control " placeholder=" enter weight" name="weight" id="weight" />
+				   			<input type="text" class="form-control "  placeholder=" enter weight" name="weight" id="weight" />
 				   			</div>
 				   		</div>
 				   		<div class="form-group" style="margin-top:10px;">
 				   			<label for="bmi" class="form-label col-sm-6">BMI:</label>
 				   			<div class="col-sm-6">
-				   			<input type="text" class="form-control " placeholder="your BMI..." name="bmi" id="bmi" />
+				   			<input type="text" class="form-control " onclick="bmiCalculation()" placeholder="your BMI..." name="bmi" id="bmi" />
 				   			</div>
 				   		</div>
 				   		</form>
 				   		</div>
 				   	</div>
-				   	<div class="panel panel-footer">
+				  <!--  	<div class="panel panel-footer">
 				   		<button class="btn btn-success" onclick="bmiCalculation()">calculate:</button>
-				   	</div>
-				   </div>
+				   	</div> -->
+				   </div> 
 
 
 				 </div>
@@ -128,20 +128,74 @@
 		<div class="container">
 		    <div class="row content-middle">
 		      <!-- start content-middle -->
-	 	    	<div class="col-md-4"><a href="pricing.html">
+	 	    	<div class="col-md-6"><a href="pricing.html">
 	 	    		<ul class="spinning">
-	 	    			<li class="live">live <span class="m_1">Spinning</span></li>
-	 	    			<li class="room">Room 2</li>
+	 	    			<!-- <li class="live">live <span class="m_1">Spinning</span></li> -->
+	 	    			<li class="room">just chill</li>
 	 	    			<div class="clear"></div>
 	 	    		</ul>
 					 <div class="view view-fifth">
-				  	   <img src="<?php echo base_url();?>assets/images/pic3.jpg" class="img-responsive" alt="">
+				  	   <!-- <img src="<?php echo base_url();?>assets/images/pic3.jpg" class="img-responsive" alt=""> -->
+
+				  	  <!--  ============================================ -->
+
+				  	  	<video  width="auto" height="350" controls>
+							  <source src="<?php echo base_url();?>assets/videos/video.mp4" type="video/mp4">
+							  <source src="<?php echo base_url();?>assets/videos/video.ogg" type="video/ogg">
+							  <source src="<?php echo base_url();?>assets/videos/video.webm" type="video/webm">
+							  <object data="<?php echo base_url();?>assets/videos/video.mp4"  height="350">
+							    <embed src="<?php echo base_url();?>assets/videos/video.swf"  height="350">
+							  </object> 
+							  Your browser does not support the video tag.
+							</video>
+
+						<!-- <canvas id="myCanvas" style="border:0px solid #FFF;"> 
+						</canvas>  -->
+
+				  	<!--    ============================================ -->
 					      <div class="mask">
-	                       	<div class="info">Read More</div>
+	                       	<div class="info">view More</div>
 			              </div>
 	                  </div>
 			     </a></div>
-				 <div class="col-md-4"><a href="pricing.html">
+			   <!--   //another video -->
+			   	<div class="col-md-6"><a href="pricing.html">
+	 	    		<ul class="spinning">
+	 	    			<!-- <li class="live">live <span class="m_1">Spinning</span></li> -->
+	 	    			<li class="room">hudd hud dabang</li>
+	 	    			<div class="clear"></div>
+	 	    		</ul>
+					 <div class="view view-fifth">
+				  	   <!-- <img src="<?php echo base_url();?>assets/images/pic3.jpg" class="img-responsive" alt=""> -->
+
+				  	  <!--  ============================================ -->
+
+				  	  	<video  width="" height="350" controls>
+							  <source src="<?php echo base_url();?>assets/videos/myvideo1.mp4" type="video/mp4">
+							  <source src="<?php echo base_url();?>assets/videos/myvideo1.ogg" type="video/ogg">
+							  <source src="<?php echo base_url();?>assets/videos/myvideo1.webm" type="video/webm">
+							  <object data="<?php echo base_url();?>assets/videos/myvideo1.mp4"  height="350">
+							    <embed src="<?php echo base_url();?>assets/videos/myvideo1.swf"  height="350">
+							  </object> 
+							  Your browser does not support the video tag.
+							</video>
+
+						<!-- <canvas id="myCanvas" style="border:0px solid #FFF;"> 
+						</canvas>  -->
+
+				  	<!--    ============================================ -->
+					      <div class="mask">
+	                       	<div class="info">view More</div>
+			              </div>
+	                  </div>
+			     </a></div>
+
+
+<!-- ........................................................ -->
+
+
+
+				<!--  <div class="col-md-4"><a href="pricing.html">
 	 	    		<ul class="spinning">
 	 	    			<li class="live">live <span class="m_1">Gym</span></li>
 	 	    			<li class="room">Room 1</li>
@@ -153,8 +207,8 @@
 	                       	<div class="info">Read More</div>
 			              </div>
 	                  </div>
-			     </a></div>
-				 <div class="col-md-4"><a href="pricing.html">
+			     </a></div> -->
+				<!--  <div class="col-md-4"><a href="pricing.html">
 	 	    		<ul class="spinning">
 	 	    			<li class="live">live <span class="m_1">Pilates</span></li>
 	 	    			<li class="room">Room 4</li>
@@ -166,7 +220,7 @@
 	                       	<div class="info">Read More</div>
 			              </div>
 	                  </div>
-			     </a></div>
+			     </a></div> -->
 				<div class="clear"></div>
 		   </div>
 		  <!-- end content-middle -->

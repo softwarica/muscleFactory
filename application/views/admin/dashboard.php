@@ -11,11 +11,11 @@
   </a></li>
   <li><a data-toggle="pill" href="#payment" class="btn btn-link">
      <img src="<?php echo base_url();?>assets/images/logo/payment.png" class="img-responsive" style="height:100px;"/>
-     <h4 style="color:#337ab7">payment</h4>
+     <h4 style="color:#337ab7">videos</h4>
   </a></li>
   <li><a data-toggle="pill" href="#manage" class="btn btn-link">
      <img src="<?php echo base_url();?>assets/images/logo/manage.png" class="img-responsive" style="height:100px;"/>
-     <h4 style="color:#337ab7">manage</h4>
+     <h4 style="color:#337ab7">images</h4>
   </a></li>
   <li><a data-toggle="pill" href="#exercise" class="btn btn-link">
      <img src="<?php echo base_url();?>assets/images/logo/exercise.png" class="img-responsive" style="height:100px;"/>
@@ -47,7 +47,7 @@
   </div>
   <div id="payment" class="tab-pane fade">
     <?php
-    $this->load->view('admin/register');
+    $this->load->view('admin/videos');
     ?>
   </div>
   <div id="manage" class="tab-pane fade">

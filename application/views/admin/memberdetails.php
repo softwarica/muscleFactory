@@ -33,7 +33,7 @@ if($viewdetails->num_rows() > 0){
  -->        <td>
         <form class="" action="<?php echo base_url();?>controlAdmin/editPicture" method="post" id="myForm" name="myForm" enctype="multipart/form-data" accept-charset="utf-8">
         <input type="hidden" name="id" value="<?php echo $row->id;?>"/>
-        <input type="file" name="userfile" id="image" class="form-control"/>
+        <input type="file" name="userfile" id="image" required="required" class="form-control"/>
 
         <input type="submit" value="change image" name="btnsubmitimage" class="btn btn-link form-control" />
        
