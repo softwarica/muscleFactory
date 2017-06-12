@@ -22,6 +22,7 @@
 
     <div class="menu" id="menu">
 	  <div class="container">
+
 		 <!-- <div class="logo">
 			<a href="index.html">
          <img src="<?php echo base_url();?>assets/images/logo/logo.png" alt"" class="img-responsive" width="100"/></a>
@@ -78,18 +79,20 @@
 				   			<input type="text" class="form-control "  placeholder=" enter weight" name="weight" id="weight" />
 				   			</div>
 				   		</div>
+				   		</form>
+				   		 	<div class="panel panel-footer">
+				   		<button class="btn btn-success center-block" onclick="bmiCalculation()">calculate:</button>
+				   	</div>
 				   		<div class="form-group" style="margin-top:10px;">
 				   			<label for="bmi" class="form-label col-sm-6">BMI:</label>
 				   			<div class="col-sm-6">
-				   			<input type="text" class="form-control " onclick="bmiCalculation()" placeholder="your BMI..." name="bmi" id="bmi" />
+				   			<input type="text" class="form-control "  placeholder="your BMI..." name="bmi" id="bmi" />
 				   			</div>
 				   		</div>
-				   		</form>
+				   		
 				   		</div>
 				   	</div>
-				  <!--  	<div class="panel panel-footer">
-				   		<button class="btn btn-success" onclick="bmiCalculation()">calculate:</button>
-				   	</div> -->
+				  
 				   </div> 
 
 
@@ -141,11 +144,11 @@
 
 				  	  	<video  width="auto" height="350" controls>
 							  <source src="<?php echo base_url();?>assets/videos/video.mp4" type="video/mp4">
-							  <source src="<?php echo base_url();?>assets/videos/video.ogg" type="video/ogg">
+							  <!-- <source src="<?php echo base_url();?>assets/videos/video.ogg" type="video/ogg">
 							  <source src="<?php echo base_url();?>assets/videos/video.webm" type="video/webm">
 							  <object data="<?php echo base_url();?>assets/videos/video.mp4"  height="350">
 							    <embed src="<?php echo base_url();?>assets/videos/video.swf"  height="350">
-							  </object> 
+							  </object>  -->
 							  Your browser does not support the video tag.
 							</video>
 
@@ -172,11 +175,11 @@
 
 				  	  	<video  width="" height="350" controls>
 							  <source src="<?php echo base_url();?>assets/videos/myvideo1.mp4" type="video/mp4">
-							  <source src="<?php echo base_url();?>assets/videos/myvideo1.ogg" type="video/ogg">
+							<!--   <source src="<?php echo base_url();?>assets/videos/myvideo1.ogg" type="video/ogg">
 							  <source src="<?php echo base_url();?>assets/videos/myvideo1.webm" type="video/webm">
 							  <object data="<?php echo base_url();?>assets/videos/myvideo1.mp4"  height="350">
 							    <embed src="<?php echo base_url();?>assets/videos/myvideo1.swf"  height="350">
-							  </object> 
+							  </object>  -->
 							  Your browser does not support the video tag.
 							</video>
 
@@ -224,15 +227,24 @@
 				<div class="clear"></div>
 		   </div>
 		  <!-- end content-middle -->
+		
+
+						
 		   <div class="row about">
 		      <div class="col-md-8">
 		     	 <h3 class="m_2">All Classes</h3>
 		     	 <div class="classes">
-		     	 	<div class="cardio_list">
+		     	 	<!-- <div class="cardio_list"> -->
+		     	 	   <?php
+					if($class->num_rows() > 0){
+						foreach($class->result() as $row){
+							?>
 		     	 	  <div class="cardio_sublist">
+		     	 	 
 			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>Cardio Fitness</span></li>
+			     	 		<li><i class="clock"> </i><span><?php echo $row->cname;?></span></li>
 			     	 	</ul>
+			     	 	
 			     	 	<div class="social-media">
 						     <ul>
 						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
@@ -242,8 +254,15 @@
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	  <div class="cardio_sublist">
+		     	
+ 	 </div>
+
+		     	 	  	<?php	
+						}
+
+					}
+		  ?>
+		     	 	<!--   <div class="cardio_sublist">
 			     	 	<ul class="cardio">
 			     	 		<li><i class="clock"> </i><span>Spinning</span></li>
 			     	 	</ul>
@@ -256,8 +275,8 @@
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	  <div class="cardio_sublist">
+		     	 	  </div> -->
+		     	 	  <!-- <div class="cardio_sublist">
 			     	 	<ul class="cardio">
 			     	 		<li><i class="clock"> </i><span>Pilates</span></li>
 			     	 	</ul>
@@ -270,8 +289,8 @@
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	   <div class="cardio_sublist">
+		     	 	  </div> -->
+		     	 	  <!--  <div class="cardio_sublist">
 			     	 	<ul class="cardio">
 			     	 		<li><i class="clock"> </i><span>Boxing</span></li>
 			     	 	</ul>
@@ -284,10 +303,11 @@
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	</div>
-		     	 	<div class="cardio_list1">
-		     	 	  <div class="cardio_sublist">
+		     	 	  </div> -->
+		     	<!--  	</div> -->
+
+		     	 <!-- 	<div class="cardio_list1"> -->
+		     	 	  <!-- <div class="cardio_sublist">
 			     	 	<ul class="cardio">
 			     	 		<li><i class="clock"> </i><span>Aerobics</span></li>
 			     	 	</ul>
@@ -300,8 +320,8 @@
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	  <div class="cardio_sublist">
+		     	 	  </div> -->
+		     	 	  <!-- <div class="cardio_sublist">
 			     	 	<ul class="cardio">
 			     	 		<li><i class="clock"> </i><span>Kik Boxing</span></li>
 			     	 	</ul>
@@ -314,8 +334,8 @@
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	  <div class="cardio_sublist">
+		     	 	  </div> -->
+		     	 	<!--   <div class="cardio_sublist">
 			     	 	<ul class="cardio">
 			     	 		<li><i class="clock"> </i><span>CrossFit</span></li>
 			     	 	</ul>
@@ -328,8 +348,8 @@
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	   <div class="cardio_sublist">
+		     	 	  </div> -->
+		     	 	 <!--   <div class="cardio_sublist">
 			     	 	<ul class="cardio">
 			     	 		<li><i class="clock"> </i><span>Yoga</span></li>
 			     	 	</ul>
@@ -342,11 +362,12 @@
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	</div>
-		     	 	<div class="clear"></div>
+		     	 	  </div> -->
+		     	 <!-- 	</div> -->
+		     	 <!-- 	<div class="clear"></div> -->
 		     	 </div>
 				</div>
+				
 				<div class="col-md-4">
 				  <h3 class="m_4">Membership Prices</h3>
 				  <div class="members">
@@ -359,6 +380,7 @@
 			    </div>
 			    <div class="clear"></div>
 			</div>
+			
 		    <div class="row content_middle_bottom">
 			  <div class="col-md-4">
 		        <h3 class="m_2">Our Trainers</h3>

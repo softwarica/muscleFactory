@@ -69,5 +69,7 @@ public function updateImage($id,$image){
 	$this->db->where('id',$id);
 	$this->db->update('tblregister',$arr);
 }
+
+
 }
 ?>

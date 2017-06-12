@@ -226,5 +226,6 @@ $this->load->model("modelAdmin");
 	$data['viewdetails']=$result;
 	$this->load->view('admin/memberdetails',$data);
 }
+
 }
 ?>

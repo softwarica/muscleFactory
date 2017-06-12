@@ -64,6 +64,8 @@
                     echo $update_message;
                   } else if(isset($_POST['btnsubmitimage'])){
                     echo $image_update;
+                  } else if(isset($_POST['btnexercisesubmit'])){
+                    echo $exerciseSaveMsg;
                   }
 
                    ?></h3>

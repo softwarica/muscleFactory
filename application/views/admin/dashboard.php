@@ -9,17 +9,17 @@
      <img src="<?php echo base_url();?>assets/images/logo/equip.png" class="img-responsive" style="height:100px;"/>
      <h4 style="color:#337ab7">equipment</h4>
   </a></li>
-  <li><a data-toggle="pill" href="#payment" class="btn btn-link">
-     <img src="<?php echo base_url();?>assets/images/logo/payment.png" class="img-responsive" style="height:100px;"/>
-     <h4 style="color:#337ab7">videos</h4>
+  <li><a data-toggle="pill" href="#exercise" class="btn btn-link">
+     <img src="<?php echo base_url();?>assets/images/logo/exercise.png" class="img-responsive" style="height:100px;"/>
+     <h4 style="color:#337ab7">Exercise</h4>
   </a></li>
   <li><a data-toggle="pill" href="#manage" class="btn btn-link">
      <img src="<?php echo base_url();?>assets/images/logo/manage.png" class="img-responsive" style="height:100px;"/>
      <h4 style="color:#337ab7">images</h4>
   </a></li>
-  <li><a data-toggle="pill" href="#exercise" class="btn btn-link">
+  <li><a data-toggle="pill" href="#video" class="btn btn-link">
      <img src="<?php echo base_url();?>assets/images/logo/exercise.png" class="img-responsive" style="height:100px;"/>
-     <h4 style="color:#337ab7">exercises</h4>
+     <h4 style="color:#337ab7">videos</h4>
   </a></li>
 
   <li><a data-toggle="pill" href="#totalincome" class="btn btn-link">
@@ -34,7 +34,7 @@
 </ul>
 </div>
 
-<div class="tab-content">
+<div class="tab-content main">
   <div id="register" class="tab-pane fade in active">
     <?php
     $this->load->view('admin/register');
@@ -45,19 +45,22 @@
     $this->load->view('admin/equipment');
     ?>
   </div>
-  <div id="payment" class="tab-pane fade">
-    <?php
-    $this->load->view('admin/videos');
-    ?>
+              <script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#exercisePage").load("<?php echo base_url();?>controlExercise/getCategory");
+                        })
+                        </script>
+  <div id="exercise" class="tab-pane fade">
+    <div id="exercisePage"></div>
   </div>
   <div id="manage" class="tab-pane fade">
     <?php
     $this->load->view('admin/register');
     ?>
   </div>
-  <div id="exercise" class="tab-pane fade">
+  <div id="video" class="tab-pane fade">
     <?php
-    $this->load->view('admin/register');
+    $this->load->view('admin/videos');
     ?>
   </div>
   <div id="totalincome" class="tab-pane fade">

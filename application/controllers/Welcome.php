@@ -20,7 +20,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('index');
+		$this->load->model('modelWelcome');
+		$result=$this->modelWelcome->retriveClass();
+
+		$data['class']=$result;
+		$this->load->view('index',$data);
 	}
 	public function goToBmiTable()
 	{
@@ -31,3 +35,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('admin/adminPage');
 	}
 }
+
+	
+
+	
+

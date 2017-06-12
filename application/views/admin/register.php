@@ -33,7 +33,7 @@
         </div>
          <div class="form-group">
       <label for="pword">Password:</label>
-      <input type="password" name="pword" class="form-control" id="pword"  placeholder="please enter password" required="required">
+      <input type="password" name="pword" onchange="checkLength()" class="form-control" id="pword"  placeholder="please enter password" required="required">
     </div>
     <div class="form-group">
           <span id="pwordMessage"></span>
@@ -117,11 +117,12 @@
     // .innerhtml is used fo div/span
   }
 
-  function checkPassword() {
+
+    function checkLength(){
 
           var pword=document.forms["myForm"]["pword"].value;
           var pwordMessage=$('#pwordMessage');//this variable is for css
-          var pMessage=$('pMessage');// css for password matching message
+          
 
           if(pword.length<9){
         document.getElementById('pword').focus();
@@ -129,6 +130,30 @@
             'color':'red'
           });
          document.getElementById('pwordMessage').innerHTML='please enter password greater than 8 letter';
+                  $(document).ready(function(){
+                      $('#btnsubmit').fadeOut();
+                  });
+        }else{
+          document.getElementById('pwordMessage').innerHTML='';
+        }
+
+    }
+
+  function checkPassword() {
+
+          var pword=document.forms["myForm"]["pword"].value;
+          var pwordMessage=$('#pwordMessage');//this variable is for css
+          var pMessage=$('#pMessage');// css for password matching message
+
+          if(pword.length<9){
+        document.getElementById('pword').focus();
+        pwordMessage.css({
+            'color':'red'
+          });
+         document.getElementById('pwordMessage').innerHTML='please enter password greater than 8 letter';
+                  $(document).ready(function(){
+                      $('#btnsubmit').fadeOut();
+                  });
         }else{
           document.getElementById('pwordMessage').innerHTML='';
         }
@@ -136,7 +161,7 @@
 
 
 
-    if(document.getElementById('pword').value === document.getElementById('repword').value) {
+    if(document.getElementById('pword').value === document.getElementById('repword').value && pword.length>8) {
        pMessage.css({
         'color':'blue'
       });
