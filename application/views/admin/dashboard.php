@@ -1,6 +1,6 @@
 <div class="container" style="margin-top:10px;">
 
-<ul class="nav navabar-default">
+<ul class="nav navabar-default" style="margin-left:100px;">
   <li class="active"><a data-toggle="pill" href="#register" class="btn btn-link">
      <img src="<?php echo base_url();?>assets/images/logo/register.png" class="img-responsive" style="height:100px;"/>
      <h4 style="color:#337ab7">registration</h4>
@@ -65,10 +65,13 @@
     $this->load->view('admin/register');
     ?>
   </div>
+                      <script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#videoPage").load("<?php echo base_url();?>controlVideo/getCategory");
+                        })
+                        </script>
   <div id="video" class="tab-pane fade">
-    <?php
-    $this->load->view('admin/videos');
-    ?>
+    <div id="videoPage"></div>
   </div>
   <div id="totalincome" class="tab-pane fade">
     <?php

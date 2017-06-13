@@ -117,7 +117,7 @@
 							<hr/>
 							<div class="class="btn btn-link">
 							<h3 align="center">
-							<a href="<?php echo base_url();?>welcome/goToBmiTable">BMI table:</a>
+							<a href="<?php echo base_url();?>controlWelcome/goToBmiTable">BMI table:</a>
 							</h3></div>
 				 		</div>
 
@@ -143,7 +143,7 @@
 				  	  <!--  ============================================ -->
 
 				  	  	<video  width="auto" height="350" controls>
-							  <source src="<?php echo base_url();?>assets/videos/video.mp4" type="video/mp4">
+							  <source src="<?php echo base_url();?>assets/videos/video1.mp4" type="video/mp4">
 							  <!-- <source src="<?php echo base_url();?>assets/videos/video.ogg" type="video/ogg">
 							  <source src="<?php echo base_url();?>assets/videos/video.webm" type="video/webm">
 							  <object data="<?php echo base_url();?>assets/videos/video.mp4"  height="350">
@@ -174,7 +174,7 @@
 				  	  <!--  ============================================ -->
 
 				  	  	<video  width="" height="350" controls>
-							  <source src="<?php echo base_url();?>assets/videos/myvideo1.mp4" type="video/mp4">
+							  <source src="<?php echo base_url();?>assets/videos/video2.mp4" type="video/mp4">
 							<!--   <source src="<?php echo base_url();?>assets/videos/myvideo1.ogg" type="video/ogg">
 							  <source src="<?php echo base_url();?>assets/videos/myvideo1.webm" type="video/webm">
 							  <object data="<?php echo base_url();?>assets/videos/myvideo1.mp4"  height="350">

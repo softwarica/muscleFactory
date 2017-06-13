@@ -19,7 +19,7 @@ if($exercise->num_rows() > 0){
 	     	 	
 	     	 		<!-- <h4>26 April, 2014</h4> -->
 	     	 		<div class="card">
-	     	 		<img src="<?php echo base_url();?>assets/images/equipment/<?php echo $row->eqimage;?>" alt="" class="img-responsive" style="width:500px;">
+	     	 		<img src="<?php echo base_url();?>assets/images/exercises/<?php echo $row->eqimage;?>" alt="" class="img-responsive" style="width:500px;">
 	     	 		</div>
 	     	 </div>
 	     	 <div class="col-lg-6">

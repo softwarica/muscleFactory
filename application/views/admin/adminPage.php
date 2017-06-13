@@ -36,7 +36,7 @@
              <ul class="nav"  > 
                <li class="active"><a data-toggle="pill" href="#home">DASHBOARD</a></li>
                <li><a data-toggle="pill" href="#menu1">MEMBERS LIST</a></li>
-               <li><a data-toggle="pill" href="#menu2">EQUIPMENTS</a></li>
+               <li><a data-toggle="pill" href="#menu2">EXERCISE</a></li>
                <li><a data-toggle="pill" href="#menu3">PAYMENT</a></li>
                <li><a data-toggle="pill" href="#menu4">STATUS</a></li>
                <li><a data-toggle="pill" href="#menu5">LOGOUT</a></li>
@@ -51,25 +51,27 @@
            </div>
            <div class="col-lg-12">
              <h3 align="center" style="color:red;">
-                  <?php if (isset($_POST['btnsubmit'])) {
-                    // echo "<script type='text/javascript'>alert('$insertmsg');</script>";
-                    echo $insertmsg;
-                    
-                    
-                  } else if(isset($_GET['id'])){
-                    // echo "<script type='text/javascript'>alert('$delete_message');</script>";
-                    echo $delete_message;
-                  } else if(isset($_POST['btnsubmitedit'])){
-                    // echo "<script type='text/javascript'>alert('$update_message');</script>";
-                    echo $update_message;
-                  } else if(isset($_POST['btnsubmitimage'])){
-                    echo $image_update;
-                  } else if(isset($_POST['btnexercisesubmit'])){
-                    echo $exerciseSaveMsg;
-                  } else if(isset($_POST['btnequipmentsubmit'])){
-                    echo $eqinsertmsg;
-                  }
-                  
+                  <?php 
+                  echo $this->session->flashdata('insertmsg');
+                  echo $this->session->flashdata('delete_message');
+                  echo $this->session->flashdata('update_message');
+                  echo $this->session->flashdata('image_update');
+                  echo $this->session->flashdata('eqinsertmsg');
+                  echo $this->session->flashdata('vdoinsertmsg');
+                  // if(isset($_GET['id'])){
+                  //   // echo "<script type='text/javascript'>alert('$delete_message');</script>";
+                  //   echo $delete_message;
+                  // } else if(isset($_POST['btnsubmitedit'])){
+                  //   // echo "<script type='text/javascript'>alert('$update_message');</script>";
+                  //   echo $update_message;
+                  // } else if(isset($_POST['btnsubmitimage'])){
+                  //   echo $image_update;
+                  // } else if(isset($_POST['btnexercisesubmit'])){
+                  //   echo $exerciseSaveMsg;
+                  // } else if(isset($_POST['btnequipmentsubmit'])){
+                  //   echo $eqinsertmsg;
+                  // } 
+                   
 
                    ?></h3>
                    </div>

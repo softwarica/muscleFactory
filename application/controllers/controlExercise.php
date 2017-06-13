@@ -5,7 +5,7 @@ class ControlExercise extends CI_Controller{
 			$eqcat=$this->input->post('eqcat');
 			$eqdetails=$this->input->post('eqdetails');
 
-				$config['upload_path']="assets/images/equipment";
+				$config['upload_path']="assets/images/exercises";
 				$config['allowed_types']  = 'gif|jpg|png';
 				$config['max-width']="100";
 				$config['max-height']="100";
@@ -20,8 +20,10 @@ class ControlExercise extends CI_Controller{
 			$this->load->model('modelExercise');
 			$this->modelExercise->saveEquipment($eqname,$eqcat,$eqimage,$eqdetails);
 
-			$data['eqinsertmsg']='data sucessfully insert into table equipment';
-			$this->load->view('admin/adminPage',$data);
+			// $data['eqinsertmsg']='data sucessfully insert into table equipment';
+			// $this->load->view('admin/adminPage',$data);
+			$this->session->set_flashdata('eqinsertmsg','data sucessfully insert into table exercise');
+			redirect('controlAdmin/index');
 				}
 
 

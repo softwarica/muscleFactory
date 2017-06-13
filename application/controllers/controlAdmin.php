@@ -79,8 +79,10 @@ $bmi=$this->input->post('bmi');
 $this->load->model('modelAdmin');
 $this->modelAdmin->saveMember($mname,$image,$address,$email,$contact,$uname,$pword,$dob,$weight,$ftheight,$heightinch,$jdate,$package,$bmi);
 
-$data['insertmsg']="data insert successfully";
-$this->load->view('admin/adminPage',$data);
+// $data['insertmsg']="data insert successfully
+$this->session->set_flashData('insertmsg','data sucessfully insert in table registration');
+redirect('controlAdmin/index');
+// $this->load->view('admin/adminPage',$data);
 
 
 	}
@@ -119,8 +121,10 @@ public function removeMember(){
 
 	$this->modelAdmin->deleteMember($id);
 
-	$data['delete_message']="data successfully delete";
-	$this->load->view('admin/adminPage',$data);
+$this->session->set_flashData('delete_message','data successfully delete');
+redirect('controlAdmin/index');
+	// $data['delete_message']="data successfully delete";
+	// $this->load->view('admin/adminPage',$data);
 
 }
 
@@ -153,8 +157,11 @@ $bmi=$this->input->post('bmi');
 $this->load->model('modelAdmin');
 $this->modelAdmin->updateMember($id,$mname,$address,$email,$contact,$uname,$pword,$dob,$weight,$ftheight,$heightinch,$jdate,$package,$bmi);
 
-$data['update_message']="data successfully update";
-$this->load->view('admin/adminPage',$data);
+$this->session->set_flashData('update_message','data successfully update');
+redirect('controlAdmin/index');
+
+// $data['update_message']="data successfully update";
+// $this->load->view('admin/adminPage',$data);
 
 
 
@@ -191,6 +198,7 @@ public function editPicture(){
 								
 				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
 				unlink($path);
+
 			
 		}
 	}
@@ -202,30 +210,31 @@ public function editPicture(){
 	$this->modelAdmin->updateImage($id,$image);
 
 	// $result=$this->modelAdmin->retriveMemberById($id);
+	$this->session->set_flashData('image_update','image sucessfully update');
+	redirect('controlAdmin/index');
 
-
-	$data['image_update']='image sucessfull update';
-	$this->load->view('admin/adminPage',$data);
+	// $data['image_update']='image sucessfull update';
+	// $this->load->view('admin/adminPage',$data);
 }
 
 
 }
-public function deleteImage(){
-$this->load->model("modelAdmin");
-	$id=$this->input->get('id');
-	$result=$this->modelAdmin->retriveMemberById($id);
-	if($result->num_rows() > 0){
-		foreach($result->result() as $row){
-				$filename=$row->image;
+// public function deleteImage(){
+// $this->load->model("modelAdmin");
+// 	$id=$this->input->get('id');
+// 	$result=$this->modelAdmin->retriveMemberById($id);
+// 	if($result->num_rows() > 0){
+// 		foreach($result->result() as $row){
+// 				$filename=$row->image;
 								
-				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
-				unlink($path);
+// 				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
+// 				unlink($path);
 			
-		}
-	}
-	$data['viewdetails']=$result;
-	$this->load->view('admin/memberdetails',$data);
-}
+// 		}
+// 	}
+// 	$data['viewdetails']=$result;
+// 	$this->load->view('admin/memberdetails',$data);
+// }
 
 }
 ?>
