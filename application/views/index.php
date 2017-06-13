@@ -31,7 +31,7 @@
 		   <!-- <a class="toggleMenu" href="#">Menu</a> -->
 			 <ul class="nav">
 			   <li class="active"><a href="#">Home</a></li>
-			   <li><a href="<?php echo base_url();?>welcome/goToAdmin">Admin</a></li>
+			   <li><a href="<?php echo base_url();?>controlWelcome/goToAdmin">Admin</a></li>
 			   <li><a href="trainers.html">Trainers</a></li>
 			   <li><a href="classes.html">Classes</a>
 
@@ -482,41 +482,57 @@
 		<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.flexisel.js"></script>
 	  </div>
      </div>
+     <!-- ......................... -->
+     
      <div class="col-md-4">
-     	 <h3 class="m_2">Next Events</h3>
+     <div class="card">
+     	 <a href="<?php echo base_url();?>controlExercise/getExercise"><h3 class="m_2">Exercises</h3></a>
      	 <div class="events">
      	 	<div class="event-top">
 	     	 	<ul class="event1">
-	     	 		<h4>26 April, 2014</h4>
-	     	 		<img src="<?php echo base_url();?>assets/images/pic.jpg" alt="">
+	     	 		<!-- <h4>26 April, 2014</h4> -->
+	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
 	     	 	</ul>
 	     	 	<ul class="event1_text">
-	     	 		<span class="m_5">h.12.00-h.13.00</span>
-	     	 		<h4>Aerobics</h4>
-	     	 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,. </p>
-	     	 		<div class="btn2">
+	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
+	     	 		<h4>bench press</h4>
+	     	 		<p>This exercise is for chest</p>
+	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
-					</div>
+					</div> -->
 	     	 	</ul>
      	 		<div class="clear"></div>
      	 	</div>
      	 	<div class="event-bottom">
 	     	 	<ul class="event1">
-	     	 		<h4>26 April, 2014</h4>
-	     	 		<img src="<?php echo base_url();?>assets/images/pic.jpg" alt="">
+	     	 		<!-- <h4>26 April, 2014</h4> -->
+	     	 		<img src="<?php echo base_url();?>assets/images/arnoldpress.jpg" alt="">
 	     	 	</ul>
 	     	 	<ul class="event1_text">
-	     	 		<span class="m_5">h.12.00-h.13.00</span>
-	     	 		<h4>Spinning</h4>
-	     	 		<p>Lorem ipsum dolor sit amet. </p>
-	     	 		<div class="btn2">
+	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
+	     	 		<h4>Arnold press</h4>
+	     	 		<p>This exercise is for shoulder</p>
+	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
-					</div>
+					</div> -->
 	     	 	</ul>
      	 		<div class="clear"></div>
      	 	</div>
      	 </div>
+     	 </div>
      </div>
+
+
+
+
+
+
+
+
+
+
+
+<!--      ...................... -->
      <div class="col-md-4">
      	 <h3 class="m_2">From the blog</h3>
      	 <div class="blog_events">

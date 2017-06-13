@@ -26,7 +26,7 @@
           <div class="container">
           
                    
-                     <a href="<?php echo base_url();?>welcome/index">
+                     <a href="<?php echo base_url();?>controlWelcome/index">
               <div class="header-bottom_left">
                 <img src="<?php echo base_url();?>assets/images/logo/logo.png" alt"" class="img-responsive" width="100"/>
               </div>
@@ -66,7 +66,10 @@
                     echo $image_update;
                   } else if(isset($_POST['btnexercisesubmit'])){
                     echo $exerciseSaveMsg;
+                  } else if(isset($_POST['btnequipmentsubmit'])){
+                    echo $eqinsertmsg;
                   }
+                  
 
                    ?></h3>
                    </div>

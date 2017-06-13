@@ -26,7 +26,7 @@ if($viewdetails->num_rows() > 0){
         </tr>
      <tr>
         <th>Member Picture:</th>
-        <td><img src="<?php echo base_url();?>assets/images/admin/<?php echo $row->image;?>" class="img-responsive" width="200"/>
+        <td><img src="<?php echo base_url();?>assets/images/members/<?php echo $row->image;?>" class="img-responsive" width="200"/>
         
         <!-- </td>
         <td><a class="btn btn-link" id="editclick"  onclick="showEdit()">EDIT</a></td>

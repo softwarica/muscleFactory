@@ -5,10 +5,10 @@
      <img src="<?php echo base_url();?>assets/images/logo/register.png" class="img-responsive" style="height:100px;"/>
      <h4 style="color:#337ab7">registration</h4>
   </a></li>
-  <li><a data-toggle="pill" href="#equipment" class="btn btn-link">
+<!--   <li><a data-toggle="pill" href="#equipment" class="btn btn-link">
      <img src="<?php echo base_url();?>assets/images/logo/equip.png" class="img-responsive" style="height:100px;"/>
      <h4 style="color:#337ab7">equipment</h4>
-  </a></li>
+  </a></li> -->
   <li><a data-toggle="pill" href="#exercise" class="btn btn-link">
      <img src="<?php echo base_url();?>assets/images/logo/exercise.png" class="img-responsive" style="height:100px;"/>
      <h4 style="color:#337ab7">Exercise</h4>
@@ -40,19 +40,26 @@
     $this->load->view('admin/register');
     ?>
   </div>
-  <div id="equipment" class="tab-pane fade">
-    <?php
-    $this->load->view('admin/equipment');
-    ?>
+          <script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#exercisePage").load("<?php echo base_url();?>controlExercise/getCategory");
+                        })
+                        </script>
+  <div id="exercise" class="tab-pane fade">
+      <div id="exercisePage"></div>
   </div>
-              <script type="text/javascript">
+
+            <!--   <script type="text/javascript">
                         $(document).ready(function(){
                             $("#exercisePage").load("<?php echo base_url();?>controlExercise/getCategory");
                         })
                         </script>
   <div id="exercise" class="tab-pane fade">
     <div id="exercisePage"></div>
-  </div>
+  </div> -->
+
+
+
   <div id="manage" class="tab-pane fade">
     <?php
     $this->load->view('admin/register');

@@ -1,35 +1,50 @@
 <?php
 class ControlExercise extends CI_Controller{
 	public function newExercise(){
-		$ecat=$this->input->post('ecat');
-		$ename=$this->input->post('ename');
-//for passing video
-			$config['upload_path']="assets/videos";
-		$config['allowed_types']  = 'mp4';
-		$config['max-width']="100";
-		$config['max-height']="100";
+			$eqname=$this->input->post('eqname');
+			$eqcat=$this->input->post('eqcat');
+			$eqdetails=$this->input->post('eqdetails');
 
-		$this->load->library('upload',$config);
-		$this->upload->do_upload('userfile');
-		$data=array('upload_data'=>$this->upload->data());
-//------------------------------------
+				$config['upload_path']="assets/images/equipment";
+				$config['allowed_types']  = 'gif|jpg|png';
+				$config['max-width']="100";
+				$config['max-height']="100";
 
-		$video=$data['upload_data']['file_name'];
+				$this->load->library('upload',$config);
+				$this->upload->do_upload('eqimage');
+				$data=array('upload_data'=>$this->upload->data());
 
-		$this->load->model('modelExercise');
-		$this->modelExercise->saveExercise($ecat,$ename,$video);
+			$eqimage=$data['upload_data']['file_name'];
 
-		$data['exerciseSaveMsg']="data sucessfully insert into table exercise";
-		$this->load->view('admin/adminPage',$data);
+
+			$this->load->model('modelExercise');
+			$this->modelExercise->saveEquipment($eqname,$eqcat,$eqimage,$eqdetails);
+
+			$data['eqinsertmsg']='data sucessfully insert into table equipment';
+			$this->load->view('admin/adminPage',$data);
+				}
+
+
+				public function getCategory(){
+				$this->load->model('modelExercise');
+				$result=$this->modelExercise->retriveCategory();
+
+				$data['eqclass']=$result;
+				$this->load->view('admin/exercise',$data);
+
+				}
+
+				public function getExercise(){
+				$this->load->model('modelExercise');
+
+				$result=$this->modelExercise->retriveEquipment();
+				$data['exercise']=$result;
+
+				$this->load->view('exercise',$data);
+
+		}
+
 
 }
 
-public function getCategory(){
-	$this->load->model('modelExercise');
-	$result=$this->modelExercise->retriveCategory();
-
-	$data['categoryname']=$result;
-	$this->load->view('admin/exercise',$data);
-}
-}
 ?>

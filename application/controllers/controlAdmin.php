@@ -52,7 +52,7 @@ public function newMember(){
 
 	}else{
 		//for uploading images
-		$config['upload_path']="assets/images/admin";
+		$config['upload_path']="assets/images/members";
 		$config['allowed_types']  = 'gif|jpg|png';
 		$config['max-width']="100";
 		$config['max-height']="100";
@@ -111,7 +111,7 @@ public function removeMember(){
 				$filename=$row->image;
 				
 				
-				$path='C:/xampp/htdocs/muscleFactory/assets/images/admin/'.$filename;
+				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
 				unlink($path);
 			
 		}
@@ -171,7 +171,7 @@ public function viewDetails(){
 public function editPicture(){
 	if(isset($_POST['btnsubmitimage'])){
 
-	$config['upload_path']="assets/images/admin";
+	$config['upload_path']="assets/images/members";
 		$config['allowed_types']  = 'gif|jpg|png';
 		$config['max-width']="100";
 		$config['max-height']="100";
@@ -189,7 +189,7 @@ public function editPicture(){
 		foreach($result->result() as $row){
 				$filename=$row->image;
 								
-				$path='C:/xampp/htdocs/muscleFactory/assets/images/admin/'.$filename;
+				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
 				unlink($path);
 			
 		}
@@ -218,7 +218,7 @@ $this->load->model("modelAdmin");
 		foreach($result->result() as $row){
 				$filename=$row->image;
 								
-				$path='C:/xampp/htdocs/muscleFactory/assets/images/admin/'.$filename;
+				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
 				unlink($path);
 			
 		}
