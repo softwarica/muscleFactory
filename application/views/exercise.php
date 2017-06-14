@@ -5,15 +5,17 @@
 	<div class="panel panel-heading">
 		<h4 class="btn btn-link">Exercises with its picture, its category and details</h4>
 	</div>
+	
+<div class="panel panel-body">
+	
+
+
 	<?php
 if($exercise->num_rows() > 0){
 	foreach($exercise->result() as $row){
 	?>
-<div class="panel panel-body">
-	
-
+	<div class="col-lg-12" style="margin-top:15px;">
 <div class="card">
-	<div class="col-lg-12">
      	 <div class="events">
      	 	<div class="col-lg-6">
 	     	 	
@@ -31,13 +33,16 @@ if($exercise->num_rows() > 0){
 	     	 		<h4>Exercise Category:</h4>
 	     	 		<p><?php echo $row->eqcat;?></p>
 	     	 		<hr/>
+	     	 		</div>
+	     	 		<div class="col-lg-6">
 	     	 		<h4>Exercise details:</h4>
-	     	 		<p>This exercise is for chest</p>
+	     	 		<p><?php echo $row->eqdetails;?></p>
+	     	 		</div>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->
 	     	 	<!-- </ul> -->
-	     	 	</div>
+	     	 	
      	 		<div class="clear"></div>
      	 
      	 	<!-- <div class="event-bottom">
@@ -56,16 +61,19 @@ if($exercise->num_rows() > 0){
      	 		<div class="clear"></div>
      	 	</div> --> 
      	 </div>
+    
      </div>
-</div>
+     </div>
+      	 	<?php	
+}
+}
+	?>
+
 
 
      </div>
      
-	<?php	
-}
-}
-	?>
+
 </div>
 
 
