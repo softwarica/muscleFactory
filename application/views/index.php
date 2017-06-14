@@ -495,8 +495,8 @@
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<h4>bench press</h4>
-	     	 		<p>This exercise is for chest</p>
+	     	 		<a href="<?php echo base_url();?>controlExercise/getChestExercise"><h4>Chest exercise</h4>
+	     	 		<p>click here fro shest exercises</p></a>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->
@@ -510,8 +510,8 @@
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<h4>Arnold press</h4>
-	     	 		<p>This exercise is for shoulder</p>
+	     	 		<a><h4>Shoulder</h4>
+	     	 		<p>click here for shoulder exercises</p></a>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->

@@ -38,6 +38,10 @@ foreach($eqclass->result() as $row){
     <label for="eqimage">Exercise image:</label>
     <input type="file" name="eqimage" class="form-control" id="eqimage" required="required">
   </div>
+  <div class="form-group">
+    <label for="eqvideo">Exercise video:</label>
+    <input type="file" name="eqvideo" class="form-control" id="eqvideo" required="required">
+  </div>
    <div class="form-group">
     <label for="eqdetails">Exercise details:</label>
     <textarea type="text" name="eqdetails" class="form-control" id="eqdetails" placeholder="please describe about exercise" required="required" style="height:100px;"></textarea>
