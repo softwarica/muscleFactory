@@ -131,7 +131,7 @@
 		<div class="container">
 		    <div class="row content-middle">
 		      <!-- start content-middle -->
-	 	    	<div class="col-md-6"><a href="pricing.html">
+	 	    	<div class="col-md-6 card"><a href="pricing.html">
 	 	    		<ul class="spinning">
 	 	    			<!-- <li class="live">live <span class="m_1">Spinning</span></li> -->
 	 	    			<li class="room">just chill</li>
@@ -162,7 +162,7 @@
 	                  </div>
 			     </a></div>
 			   <!--   //another video -->
-			   	<div class="col-md-6"><a href="pricing.html">
+			   	<div class="col-md-6 card"><a href="pricing.html">
 	 	    		<ul class="spinning">
 	 	    			<!-- <li class="live">live <span class="m_1">Spinning</span></li> -->
 	 	    			<li class="room">hudd hud dabang</li>
@@ -231,7 +231,7 @@
 
 						
 		   <div class="row about">
-		      <div class="col-md-8">
+		      <div class="col-md-8 card">
 		     	 <h3 class="m_2">All Classes</h3>
 		     	 <div class="classes">
 		     	 	<!-- <div class="cardio_list"> -->
@@ -368,7 +368,7 @@
 		     	 </div>
 				</div>
 				
-				<div class="col-md-4">
+				<div class="col-md-4 ">
 				  <h3 class="m_4">Membership Prices</h3>
 				  <div class="members">
 				   <h4 class="m_3">25% Discount of for all members</h4>
@@ -382,7 +382,7 @@
 			</div>
 			
 		    <div class="row content_middle_bottom">
-			  <div class="col-md-4">
+			  <div class="col-md-4 card">
 		        <h3 class="m_2">Our Trainers</h3>
 		         <div class="course_demo">
 		          <ul id="flexiselDemo3">
@@ -484,34 +484,95 @@
      </div>
      <!-- ......................... -->
      
-     <div class="col-md-4">
+     <div class="col-md-8">
      <div class="card">
      	 <a href="<?php echo base_url();?>controlExercise/getExercise"><h3 class="m_2">Exercises</h3></a>
-     	 <div class="events">
-     	 	<div class="event-top">
+     	
+
+     	 <div class="col-lg-6 events">
+     	 	<div class="event-top card">
+	     	 	<ul class="event1">
+	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
+	     	 	</ul>
+	     	 	<ul class="event1_text">
+	     
+	     	 		<a href="<?php echo base_url();?>controlExercise/getChestExercise"><h4>Chest exercise</h4>
+	     	 		</a>
+	     	 		
+	     	 	</ul>
+     	 		<div class="clear"></div>
+     	 	</div>
+
+     	 	<div class="event-top card">
 	     	 	<ul class="event1">
 	     	 		<!-- <h4>26 April, 2014</h4> -->
 	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<a href="<?php echo base_url();?>controlExercise/getChestExercise"><h4>Chest exercise</h4>
-	     	 		<p>click here fro shest exercises</p></a>
+	     	 		<a href="<?php echo base_url();?>controlExercise/getShoulderExercise"><h4>Shoulder exercise</h4>
+	     	 		</a>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->
 	     	 	</ul>
      	 		<div class="clear"></div>
      	 	</div>
-     	 	<div class="event-bottom">
+     	 	<div class="event-bottom card">
 	     	 	<ul class="event1">
 	     	 		<!-- <h4>26 April, 2014</h4> -->
-	     	 		<img src="<?php echo base_url();?>assets/images/arnoldpress.jpg" alt="">
+	     	 			<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<a><h4>Shoulder</h4>
-	     	 		<p>click here for shoulder exercises</p></a>
+	     	 		<a href="<?php echo base_url();?>controlExercise/getBackExercise"><h4>Back exercise</h4>
+	     	 		</a>
+	     	 
+	     	 	</ul>
+     	 		<div class="clear"></div>
+     	 	</div>
+     	 </div>
+
+     	  <div class="col-lg-6 events">
+     	 	<div class="event-top card">
+	     	 	<ul class="event1">
+	     	 		<!-- <h4>26 April, 2014</h4> -->
+	     	 		<div class="card"><img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt=""></div>
+	     	 	</ul>
+	     	 	<ul class="event1_text">
+	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
+	     	 		<a href="<?php echo base_url();?>controlExercise/getBicepsExercise"><h4>Biceps exercise</h4>
+	     	 		</a>
+	     	 		<!-- <div class="btn2">
+					   <a href="#">Reservation</a>
+					</div> -->
+	     	 	</ul>
+     	 		<div class="clear"></div>
+     	 	</div>
+     	 	<div class="event-top card">
+	     	 	<ul class="event1">
+	     	 		<!-- <h4>26 April, 2014</h4> -->
+	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
+	     	 	</ul>
+	     	 	<ul class="event1_text">
+	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
+	     	 		<a href="<?php echo base_url();?>controlExercise/getTricepsExercise"><h4>Triceps exercise</h4>
+	     	 		</a>
+	     	 		<!-- <div class="btn2">
+					   <a href="#">Reservation</a>
+					</div> -->
+	     	 	</ul>
+     	 		<div class="clear"></div>
+     	 	</div>
+     	 	<div class="event-bottom card">
+	     	 	<ul class="event1">
+	     	 		<!-- <h4>26 April, 2014</h4> -->
+	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt=""/>
+	     	 	</ul>
+	     	 	<ul class="event1_text">
+	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
+	     	 		<a href="<?php echo base_url();?>controlExercise/getlegsExercise"><h4>Legs exercise</h4>
+	     	 		</a>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->
@@ -519,49 +580,13 @@
      	 		<div class="clear"></div>
      	 	</div>
      	 </div>
-     	 </div>
+     	 
      </div>
-
-
-
-
-
-
-
-
-
+     </div>
 
 
 <!--      ...................... -->
-     <div class="col-md-4">
-     	 <h3 class="m_2">From the blog</h3>
-     	 <div class="blog_events">
-     	 	<ul class="tab-left1">
-				<span class="tab1-img"><<?php echo base_url();?>assets/img src="images/pic7.jpg" alt=""></span>
-				<div class="tab-text1">
-				 <p><a href="#">nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip</a></p>
-				 <span class="m_date">25 April, 2014</span>
-				</div>
-				<div class="clear"></div>
-			</ul>
-			<ul class="tab-left1">
-				<span class="tab1-img"><img src="<?php echo base_url();?>assets/images/pic6.jpg" alt=""></span>
-				<div class="tab-text1">
-				 <p><a href="#">soluta nobis eleifend option congue nihil imperdiet doming id</a></p>
-				 <span class="m_date">25 April, 2014</span>
-				</div>
-				<div class="clear"></div>
-			</ul>
-			<ul class="tab-last1">
-				<span class="tab1-img"><img src="<?php echo base_url();?>assets/images/pic8.jpg" alt=""></span>
-				<div class="tab-text1">
-				 <p><a href="#">quod mazim placerat facer possim assum. Typi non habent</a></p>
-				 <span class="m_date">25 April, 2014</span>
-				</div>
-				<div class="clear"></div>
-			</ul>
-     	 </div>
-     </div>
+   
      <div class="clear"></div>
      </div>
       <div class="row about">
