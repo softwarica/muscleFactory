@@ -55,7 +55,7 @@
                   echo $this->session->flashdata('insertmsg');
                   echo $this->session->flashdata('delete_message');
                   echo $this->session->flashdata('update_message');
-                  echo $this->session->flashdata('image_update');
+                  // echo $this->session->flashdata('image_update');
                   echo $this->session->flashdata('eqinsertmsg');
                   echo $this->session->flashdata('vdoinsertmsg');
                   // if(isset($_GET['id'])){

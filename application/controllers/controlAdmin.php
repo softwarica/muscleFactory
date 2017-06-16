@@ -5,6 +5,7 @@ class ControlAdmin extends CI_Controller{
 public function index(){
 $this->load->view('admin/adminPage');
 }
+
 // public function openRegister(){
 //   $this->load->view('admin/register');
 // }
@@ -211,7 +212,7 @@ public function editPicture(){
 
 	// $result=$this->modelAdmin->retriveMemberById($id);
 	$this->session->set_flashData('image_update','image sucessfully update');
-	redirect('controlAdmin/index');
+	redirect(base_url()."controlAdmin/viewdetails?id=".$id);
 
 	// $data['image_update']='image sucessfull update';
 	// $this->load->view('admin/adminPage',$data);

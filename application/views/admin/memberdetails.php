@@ -11,6 +11,8 @@
 </span>
   </div>
 <div class="panel panel-body" id="menu" >
+  <h4 align="center" style="color:red;">
+  <?php echo $this->session->flashdata('image_update');?></h4>
 <?php
 
 if($viewdetails->num_rows() > 0){
