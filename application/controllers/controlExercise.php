@@ -91,7 +91,16 @@ class ControlExercise extends CI_Controller{
 			$this->load->view('chestVideo',$data);
 		}
 
+		public function searchExercise(){
+			$forsearch=$this->input->post('forsearch');
 
+			$this->load->model('modelExercise');
+			$result=$this->modelExercise->retriveSearchExercise($forsearch);
+
+			$data['searchdata']=$result;
+			$this->load->view('searchExercise',$data);
+
+		}
 }
 
 ?>

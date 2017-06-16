@@ -15,8 +15,8 @@
 
 
 	<?php
-if($exercise->num_rows() > 0){
-	foreach($exercise->result() as $row){
+if($searchdata->num_rows() > 0){
+	foreach($searchdata->result() as $row){
 	?>
 	<div class="col-lg-4 card" style="margin-top:15px;height:450px;">
 
@@ -42,29 +42,8 @@ if($exercise->num_rows() > 0){
 	     	 		<h4>Exercise details:</h4>
 	     	 		<p><?php echo $row->eqdetails;?></p>
 	     	 		</div>
-	     	 		<!-- <div class="btn2">
-					   <a href="#">Reservation</a>
-					</div> -->
-	     	 	<!-- </ul> -->
 	     	 	
      	 		<div class="clear"></div>
-     	 
-     	 	<!-- <div class="event-bottom">
-	     	 	<ul class="event1">
-	     	 		<!-- <h4>26 April, 2014</h4> -->
-	     	 	<!-- 	<img src="<?php echo base_url();?>assets/images/arnoldpress.jpg" alt="">
-	     	 	</ul>
-	     	 	<ul class="event1_text">
-	     	 		<span class="m_5">h.12.00-h.13.00</span>
-	     	 		<h4>Arnold press</h4>
-	     	 		<p>This exercise is for shoulder</p> -->
-	     	 		<!-- <div class="btn2">
-					   <a href="#">Reservation</a>
-					</div> -->
-	     	 <!-- 	</ul>
-     	 		<div class="clear"></div>
-     	 	</div> --> 
-     <!-- 	 </div> -->
     
     
      </div>
