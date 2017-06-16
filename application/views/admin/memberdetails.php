@@ -10,14 +10,14 @@
 <a href="<?php echo base_url();?>controlAdmin/index"><h5 class="btn btn-link ">goto admin page</h5></a>
 </span>
   </div>
-<div class="panel panel-body" id="menu">
+<div class="panel panel-body" id="menu" >
 <?php
 
 if($viewdetails->num_rows() > 0){
   foreach($viewdetails->result() as $row){
 ?>
-<div class="table-responsive">
-  <table class="table table-striped">
+<div class="table-responsive" >
+  <table class="table table-striped" style="font-size: 12px;">
     <tr>
         <th>Member ID:</th><td><?php echo $row->id; ?></td>
     </tr>

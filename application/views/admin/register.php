@@ -4,7 +4,7 @@
 <h5 align="center" class="btn btn-link">user registration form</h5>
 
   </div>
-<div class="panel panel-body">
+<div class="panel panel-body" style="font-size: 12px;">
 
 <!-- < --><!-- ?php echo form_open_multipart('controlAdmin/newMember');?> 
 <form action="http://localhost/muscleFactory/index.php/controlAdmin/newMember" enctype="multipart/form-data" method="post" accept-charset="utf-8"> -->

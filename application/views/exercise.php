@@ -6,7 +6,7 @@
 		<h4 class="btn btn-link">Exercises with its picture, its category and details</h4>
 	</div>
 	
-<div class="panel panel-body">
+<div class="panel panel-body" style="font-size: 12px;">
 	
 
 
@@ -14,14 +14,14 @@
 if($exercise->num_rows() > 0){
 	foreach($exercise->result() as $row){
 	?>
-	<div class="col-lg-12" style="margin-top:15px;">
-<div class="card">
-     	 <div class="events">
+	<div class="col-lg-6 card" style="margin-top:15px;height:450px;">
+
+     <!-- 	 <div class="events"> -->
      	 	<div class="col-lg-6">
 	     	 	
 	     	 		<!-- <h4>26 April, 2014</h4> -->
 	     	 		<div class="card">
-	     	 		<img src="<?php echo base_url();?>assets/images/exercises/<?php echo $row->eqimage;?>" alt="" class="img-responsive" style="width:500px;">
+	     	 		<img src="<?php echo base_url();?>assets/images/exercises/<?php echo $row->eqimage;?>" alt="" class="img-responsive" >
 	     	 		</div>
 	     	 </div>
 	     	 <div class="col-lg-6">
@@ -34,7 +34,7 @@ if($exercise->num_rows() > 0){
 	     	 		<p><?php echo $row->eqcat;?></p>
 	     	 		<hr/>
 	     	 		</div>
-	     	 		<div class="col-lg-6">
+	     	 		<div class="col-lg-12">
 	     	 		<h4>Exercise details:</h4>
 	     	 		<p><?php echo $row->eqdetails;?></p>
 	     	 		</div>
@@ -60,9 +60,9 @@ if($exercise->num_rows() > 0){
 	     	 <!-- 	</ul>
      	 		<div class="clear"></div>
      	 	</div> --> 
-     	 </div>
+     <!-- 	 </div> -->
     
-     </div>
+    
      </div>
       	 	<?php	
 }

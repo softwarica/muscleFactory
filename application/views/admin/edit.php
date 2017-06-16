@@ -6,7 +6,7 @@
 <h5 align="center" class="btn btn-link">edit user registration form</h5>
 
   </div>
-<div class="panel panel-body" id="menu">
+<div class="panel panel-body" id="menu" style="font-size: 12px;">
 <?php
 if($memberdetails->num_rows() > 0){
   foreach($memberdetails->result() as $row){

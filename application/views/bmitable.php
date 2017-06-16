@@ -45,7 +45,7 @@
 
 		<div class="panel panel-body">
 			<div class="table-responsive">
-				<table class="table table-striped" id="menu">
+				<table class="table table-striped" id="menu" style="font-size: 12px;">
 					<thead>
 						<tr>
 						<th>BMI</th><th>19</th><th>20</th><th>21</th><th>22</th><th>23</th><th>24</th><th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th><th>31</th><th>32</th><th>33</th><th>34</th><th>35</th><th>36</th><th>37</th><th>38</th><th>39</th><th>40</th>

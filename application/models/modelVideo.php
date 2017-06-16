@@ -12,5 +12,9 @@ class ModelVideo extends CI_Model{
 	public function retriveCategory(){
 		return $this->db->get('tblexcategory');
 		}
+
+			public function retriveVideo(){
+			return $this->db->get('tblvideo');
+			}
 }
 ?>

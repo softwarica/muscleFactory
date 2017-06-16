@@ -4,7 +4,7 @@
 <h5 align="center" class="btn btn-link">Exercise registration form</h5>
 
   </div>
-<div class="panel panel-body">
+<div class="panel panel-body" style="font-size: 12px;">
 
 <form class="" action="<?php echo base_url();?>controlExercise/newExercise" method="post" enctype="multipart/form-data" >
    <div class="form-group">

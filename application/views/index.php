@@ -1,11 +1,16 @@
 <html>
 <?php include('link.php');?>
-
+	<style type="text/css">
+	h4{
+color:white !important;
+	}
+	
+</style>
 <body>
 <?php include('header.php');?>
  
-	<div class="header">
-	   <div class="container">
+	<div class="header" style="font-size: 12px;">
+	   <div class="container" >
 		  <div class="header-text">
 			<h1>MUSCLE FACTORY</h1>
 			<h2>Best Choice For fitness</h2>
@@ -21,7 +26,7 @@
     </div>
 
     <div class="menu" id="menu">
-	  <div class="container">
+	  <div class="container" >
 
 		 <!-- <div class="logo">
 			<a href="index.html">
@@ -47,7 +52,7 @@
 	</div>
 	<!-- end menu -->
 	 <div class="main">
-	 	 <div class="container-fluid">
+	 	 <div class="container-fluid" >
 			<!-- start content-top -->
 			<div class="row content-top">
 				 <div class="col-md-4">
@@ -131,13 +136,13 @@
 		<div class="container">
 		    <div class="row content-middle">
 		      <!-- start content-middle -->
-	 	    	<div class="col-md-6 card"><a href="pricing.html">
+	 	    	<div class="col-md-6 "><a href="pricing.html">
 	 	    		<ul class="spinning">
 	 	    			<!-- <li class="live">live <span class="m_1">Spinning</span></li> -->
 	 	    			<li class="room">just chill</li>
 	 	    			<div class="clear"></div>
 	 	    		</ul>
-					 <div class="view view-fifth">
+					 <div class="view view-fifth card">
 				  	   <!-- <img src="<?php echo base_url();?>assets/images/pic3.jpg" class="img-responsive" alt=""> -->
 
 				  	  <!--  ============================================ -->
@@ -162,13 +167,13 @@
 	                  </div>
 			     </a></div>
 			   <!--   //another video -->
-			   	<div class="col-md-6 card"><a href="pricing.html">
+			   	<div class="col-md-6 "><a href="<?php echo base_url();?>controlVideo/getVideo">
 	 	    		<ul class="spinning">
 	 	    			<!-- <li class="live">live <span class="m_1">Spinning</span></li> -->
 	 	    			<li class="room">hudd hud dabang</li>
 	 	    			<div class="clear"></div>
 	 	    		</ul>
-					 <div class="view view-fifth">
+					 <div class="view view-fifth card">
 				  	   <!-- <img src="<?php echo base_url();?>assets/images/pic3.jpg" class="img-responsive" alt=""> -->
 
 				  	  <!--  ============================================ -->
@@ -231,8 +236,8 @@
 
 						
 		   <div class="row about">
-		      <div class="col-md-8 card">
-		     	 <h3 class="m_2">All Classes</h3>
+		      <div class="col-md-8 ">
+		     	 <h3 class="m_2 card">All Classes</h3>
 		     	 <div class="classes">
 		     	 	<!-- <div class="cardio_list"> -->
 		     	 	   <?php
@@ -369,7 +374,7 @@
 				</div>
 				
 				<div class="col-md-4 ">
-				  <h3 class="m_4">Membership Prices</h3>
+				  <h3 class="m_4 card">Membership Prices</h3>
 				  <div class="members">
 				   <h4 class="m_3">25% Discount of for all members</h4>
 				   <p>Discount on services and <br>treatments at the GymBase for<br> all membership cards holders.</p>
@@ -382,8 +387,8 @@
 			</div>
 			
 		    <div class="row content_middle_bottom">
-			  <div class="col-md-4 card">
-		        <h3 class="m_2">Our Trainers</h3>
+			  <div class="col-md-4 ">
+		        <h3 class="m_2 card">Our Trainers</h3>
 		         <div class="course_demo">
 		          <ul id="flexiselDemo3">
 					<li><img src="<?php echo base_url();?>assets/images/pic4.jpg"><div class="desc">
@@ -484,95 +489,118 @@
      </div>
      <!-- ......................... -->
      
-     <div class="col-md-8">
+     <div class="col-md-8" >
      <div class="card">
      	 <a href="<?php echo base_url();?>controlExercise/getExercise"><h3 class="m_2">Exercises</h3></a>
      	
 
-     	 <div class="col-lg-6 events">
-     	 	<div class="event-top card">
+     	 <div class="col-lg-6 " >
+     	 	<div class="event-bottom card" style="background:#72d0f4">
 	     	 	<ul class="event1">
-	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
+	     	 		<img src="<?php echo base_url();?>assets/images/chest.gif" alt="" >
 	     	 	</ul>
 	     	 	<ul class="event1_text">
-	     
-	     	 		<a href="<?php echo base_url();?>controlExercise/getChestExercise"><h4>Chest exercise</h4>
+	     	 	<h4>Chest exercise</h4>
+	     	<div class="btn2">
+	     	 		<a href="<?php echo base_url();?>controlExercise/getChestExercise">
+	     	 		view more
 	     	 		</a>
+	     	 		</div>
 	     	 		
 	     	 	</ul>
      	 		<div class="clear"></div>
      	 	</div>
 
-     	 	<div class="event-top card">
+     	 	<div class="event-bottom card" style="background:#72d0f4;margin-top:5px;">
 	     	 	<ul class="event1">
 	     	 		<!-- <h4>26 April, 2014</h4> -->
-	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
+	     	 		<img src="<?php echo base_url();?>assets/images/shoulder.gif" alt="">
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<a href="<?php echo base_url();?>controlExercise/getShoulderExercise"><h4>Shoulder exercise</h4>
+	     	 		<h4>Shoulder exercise</h4>
+	     	 		<div class="btn2">
+	     	 		<a href="<?php echo base_url();?>controlExercise/getShoulderExercise">
+	     	 		view more
 	     	 		</a>
+	     	 		</div>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->
 	     	 	</ul>
      	 		<div class="clear"></div>
      	 	</div>
-     	 	<div class="event-bottom card">
+     	 	<div class="event-bottom card" style="background:#72d0f4;margin-top:5px;">
 	     	 	<ul class="event1">
 	     	 		<!-- <h4>26 April, 2014</h4> -->
-	     	 			<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
+	     	 			<img src="<?php echo base_url();?>assets/images/back.gif" alt="">
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<a href="<?php echo base_url();?>controlExercise/getBackExercise"><h4>Back exercise</h4>
+	     	 		<h4>Back exercise</h4>
+	     	 		<div class="btn2">
+	     	 		<a href="<?php echo base_url();?>controlExercise/getBackExercise">
+	     	 		view more
 	     	 		</a>
+	     	 		</div>
 	     	 
 	     	 	</ul>
      	 		<div class="clear"></div>
      	 	</div>
      	 </div>
 
-     	  <div class="col-lg-6 events">
-     	 	<div class="event-top card">
+     	  <div class="col-lg-6 ">
+     	 	<div class="event-bottom card" style="background:#72d0f4">
 	     	 	<ul class="event1">
 	     	 		<!-- <h4>26 April, 2014</h4> -->
-	     	 		<div class="card"><img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt=""></div>
+	     	 		<div class="card"><img src="<?php echo base_url();?>assets/images/biceps.gif" alt=""></div>
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<a href="<?php echo base_url();?>controlExercise/getBicepsExercise"><h4>Biceps exercise</h4>
+	     	 		<h4>Biceps exercise</h4>
+	     	 		<div class="btn2">
+	     	 		<a href="<?php echo base_url();?>controlExercise/getBicepsExercise">
+	     	 		view more
 	     	 		</a>
+	     	 		</div>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->
 	     	 	</ul>
      	 		<div class="clear"></div>
      	 	</div>
-     	 	<div class="event-top card">
+     	 	<div class="event-bottom card" style="background:#72d0f4;margin-top:5px;">
 	     	 	<ul class="event1">
 	     	 		<!-- <h4>26 April, 2014</h4> -->
-	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt="">
+	     	 		<img src="<?php echo base_url();?>assets/images/triceps.gif" alt="">
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<a href="<?php echo base_url();?>controlExercise/getTricepsExercise"><h4>Triceps exercise</h4>
+	     	 		<h4>Triceps exercise</h4>
+	     	 		<div class="btn2">
+	     	 		<a href="<?php echo base_url();?>controlExercise/getTricepsExercise">
+	     	 		view more
 	     	 		</a>
+	     	 		</div>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->
 	     	 	</ul>
      	 		<div class="clear"></div>
      	 	</div>
-     	 	<div class="event-bottom card">
+     	 	<div class="event-bottom card" style="background:#72d0f4;margin-top:5px;">
 	     	 	<ul class="event1">
 	     	 		<!-- <h4>26 April, 2014</h4> -->
-	     	 		<img src="<?php echo base_url();?>assets/images/benchpress.jpg" alt=""/>
+	     	 		<img src="<?php echo base_url();?>assets/images/legs.gif" alt=""/>
 	     	 	</ul>
 	     	 	<ul class="event1_text">
 	     	 		<!-- <span class="m_5">h.12.00-h.13.00</span> -->
-	     	 		<a href="<?php echo base_url();?>controlExercise/getlegsExercise"><h4>Legs exercise</h4>
+	     	 		<h4>Legs exercise</h4>
+	     	 		<div class="btn2">
+	     	 		<a href="<?php echo base_url();?>controlExercise/getlegsExercise">
+	     	 		view more
 	     	 		</a>
+	     	 		</div>
 	     	 		<!-- <div class="btn2">
 					   <a href="#">Reservation</a>
 					</div> -->

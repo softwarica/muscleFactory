@@ -53,6 +53,14 @@ class ControlVideo extends CI_controller{
 				$this->load->view('admin/videos',$data);
 
 				}
+
+				public function getVideo(){
+					$this->load->model('modelVideo');
+					$result=$this->modelVideo->retriveVideo();
+
+					$data['exvideos']=$result;
+					$this->load->view('videos',$data);
+				}
 }
 
 ?>

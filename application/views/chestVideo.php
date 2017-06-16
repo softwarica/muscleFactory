@@ -1,7 +1,12 @@
 <?php include_once('link.php');?>
 <?php include_once('header.php');?>
 
-
+<style>
+video {
+    width: 100%;
+    height: auto;
+}
+</style>
 	<?php
 if($chestexvideo->num_rows() > 0){
 	foreach($chestexvideo->result() as $row){
@@ -11,14 +16,14 @@ if($chestexvideo->num_rows() > 0){
 		<h4 class="btn btn-link center-block"><?php echo $row->eqname; ?></h4>
 	</div>
 	
-<div class="panel panel-body">
+<div class="panel panel-body card">
 	
 
 
-	<div class="col-md-12">
+	<div class="col-md-12 " id="menu">
 
 					 <div class="view view-fifth">
-				  	  	<video  width="auto" height="450" controls style="margin-left:230px;">
+				  	  	<video  width="auto" height="450" controls>
 							  <source src="<?php echo base_url();?>assets/images/exercises/<?php echo $row->eqvideo;?>" type="video/mp4">
 							  <!-- <source src="<?php echo base_url();?>assets/videos/video.ogg" type="video/ogg">
 							  <source src="<?php echo base_url();?>assets/videos/video.webm" type="video/webm">

@@ -4,12 +4,12 @@
 <h5 class="btn btn-link">Member list</h5>
 
   </div>
-<div class="panel panel-body">
+<div class="panel panel-body" >
 <div class="table-responsive">
-<table class="table">
+<table class="table" style="font-size: 12px;">
   <tr>
     <th>Member ID</th><th>Member name</th><th>Member address</th><th>Member email</th>
-    <th>Member contact</th><th>joinDate</th><th>package ID</th><th>action</th>
+    <th>Member contact</th><th>joinDate</th><th>package ID</th><th>actions</th>
   </tr>
   <?php
  
