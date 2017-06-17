@@ -50,7 +50,7 @@
            </div>
            </div>
            <div class="col-lg-12">
-             <h3 align="center" style="color:red;">
+             <h3 align="center" style="color:red; font-size:15px;">
                   <?php 
                   echo $this->session->flashdata('insertmsg');
                   echo $this->session->flashdata('delete_message');
@@ -59,7 +59,8 @@
                   echo $this->session->flashdata('eqinsertmsg');
                   echo $this->session->flashdata('vdoinsertmsg');
                   echo $this->session->flashdata('delexmsg');
-                  
+                  echo $this->session->flashdata('image_update');
+                  echo $this->session->flashdata('video_update');
                   // if(isset($_GET['id'])){
                   //   // echo "<script type='text/javascript'>alert('$delete_message');</script>";
                   //   echo $delete_message;

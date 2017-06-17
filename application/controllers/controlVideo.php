@@ -61,6 +61,58 @@ class ControlVideo extends CI_controller{
 					$data['exvideos']=$result;
 					$this->load->view('videos',$data);
 				}
+
+		
+		public function editVideo(){
+	if(isset($_POST['btnsubmitvideo'])){
+
+	$config['upload_path']="assets/images/exercises";
+		$config['allowed_types']  = 'mp4';
+	
+
+		$this->load->library('upload',$config);
+		 if ( ! $this->upload->do_upload('video'))
+                {
+                        $error = array('error' => $this->upload->display_errors());
+
+                        print_r($error);
+                        die();
+                }
+		// $this->upload->do_upload('video');
+		$data=array('upload_data'=>$this->upload->data());
+		
+		$this->load->model('modelVideo');
+		
+// for delete of image
+	$id=$this->input->post('id');
+						$result=$this->modelVideo->retriveVideoById($id);
+	if($result->num_rows() > 0){
+		foreach($result->result() as $row){
+				$filename=$row->eqvideo;
+
+						$path='C:/xampp/htdocs/muscleFactory/assets/images/exercises/'.$filename;
+				unlink($path);
+			
+
+			
+		}
+	}
+// ............................
+
+	$video=$data['upload_data']['file_name'];
+
+	
+	$this->modelVideo->updateVideo($id,$video);
+
+	// $result=$this->modelAdmin->retriveMemberById($id);
+	$this->session->set_flashData('video_update','video sucessfully update');
+	redirect('controlAdmin/index');
+
+	// $data['image_update']='image sucessfull update';
+	// $this->load->view('admin/adminPage',$data);
+}
+}
+
 }
 
 ?>

@@ -54,11 +54,7 @@ class ModelExercise extends CI_Model{
 	$this->db->where('id',$id);
 	$this->db->update('tblexercise',$arr);
 }
-public function retriveMemberById($id){
-	$this->db->where("id",$id);
-	$result=$this->db->get("tblexercise");
-	return $result;
-}
+
 }
 
 ?>

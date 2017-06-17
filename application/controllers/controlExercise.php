@@ -141,19 +141,26 @@ class ControlExercise extends CI_Controller{
 		$config['max-height']="100";
 
 		$this->load->library('upload',$config);
-		$this->upload->do_upload('userfile');
+		// $this->upload->do_upload('userfile');
+		 if ( ! $this->upload->do_upload('userfile'))
+                {
+                        $error = array('error' => $this->upload->display_errors());
+
+                        print_r($error);
+                        die();
+                }
 		$data=array('upload_data'=>$this->upload->data());
 		
 		$this->load->model('modelExercise');
 		
 // for delete of image
 	$id=$this->input->post('id');
-						$result=$this->modelExercise->retriveMemberById($id);
+						$result=$this->modelExercise->retriveExerciseById($id);
 	if($result->num_rows() > 0){
 		foreach($result->result() as $row){
 				$filename=$row->eqimage;
 
-						$path=base_url().'assets/images/exercises/'.$filename;
+						$path='C:/xampp/htdocs/muscleFactory/assets/images/exercises/'.$filename;
 				unlink($path);
 			
 

@@ -16,5 +16,19 @@ class ModelVideo extends CI_Model{
 			public function retriveVideo(){
 			return $this->db->get('tblvideo');
 			}
+
+			public function retriveVideoById($id){
+					$this->db->where('id',$id);
+					return $this->db->get('tblexercise');
+
+			}
+			public function updateVideo($id,$video){
+	$arr=array(
+		'id'=>$id,
+		'eqvideo'=>$video
+		);
+	$this->db->where('id',$id);
+	$this->db->update('tblexercise',$arr);
+}
 }
 ?>

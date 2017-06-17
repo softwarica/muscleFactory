@@ -31,7 +31,7 @@ if($exerciselist->num_rows() > 0){
 	     	 		
 	     	 </div>
 	     	 <div class="col-lg-6">
-	     	 				<video  width="auto" height="" controls>
+	     	 				<video  width="auto" height="500" controls>
 							  <source src="<?php echo base_url();?>assets/images/exercises/<?php echo $row->eqvideo;?>" type="video/mp4">
 							  <!-- <source src="<?php echo base_url();?>assets/videos/video.ogg" type="video/ogg">
 							  <source src="<?php echo base_url();?>assets/videos/video.webm" type="video/webm">
@@ -40,7 +40,7 @@ if($exerciselist->num_rows() > 0){
 							  </object>  -->
 							  Your browser does not support the video tag.
 							</video>
-							<form class="" action="<?php echo base_url();?>controlideo/editVideo" method="post" id="myForm" name="myForm" enctype="multipart/form-data" accept-charset="utf-8">
+							<form class="" action="<?php echo base_url();?>controlVideo/editVideo" method="post" id="myForm" name="myForm" enctype="multipart/form-data" accept-charset="utf-8">
 			        <input type="hidden" name="id" value="<?php echo $row->id;?>"/>
 			        <input type="file" name="video" id="video" required="required" class="form-control"/>
 
