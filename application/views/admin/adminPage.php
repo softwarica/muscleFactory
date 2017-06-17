@@ -36,7 +36,7 @@
              <ul class="nav"  > 
                <li class="active"><a data-toggle="pill" href="#home">DASHBOARD</a></li>
                <li><a data-toggle="pill" href="#menu1">MEMBERS LIST</a></li>
-               <li><a data-toggle="pill" href="#menu2">EXERCISE</a></li>
+               <li><a data-toggle="pill" href="#menu2">EXERCISE LIST</a></li>
                <li><a data-toggle="pill" href="#menu3">PAYMENT</a></li>
                <li><a data-toggle="pill" href="#menu4">STATUS</a></li>
                <li><a data-toggle="pill" href="#menu5">LOGOUT</a></li>
@@ -55,9 +55,11 @@
                   echo $this->session->flashdata('insertmsg');
                   echo $this->session->flashdata('delete_message');
                   echo $this->session->flashdata('update_message');
-                  // echo $this->session->flashdata('image_update');
+                  
                   echo $this->session->flashdata('eqinsertmsg');
                   echo $this->session->flashdata('vdoinsertmsg');
+                  echo $this->session->flashdata('delexmsg');
+                  
                   // if(isset($_GET['id'])){
                   //   // echo "<script type='text/javascript'>alert('$delete_message');</script>";
                   //   echo $delete_message;
@@ -92,10 +94,13 @@
               <div id="memberlistcontent"></div>
                </div>
 
+               <script type="text/javascript">
+            $(document).ready(function(){
+                $("#exerciselistcontent").load("<?php echo base_url();?>controlExercise/getExerciseList");
+            })
+            </script>
                <div id="menu2" class="tab-pane fade">
-               
-                
-
+               <div id="exerciselistcontent"></div>
                </div>
 
 

@@ -30,12 +30,12 @@ if($chestexercise->num_rows() > 0){
 	     	 <div class="col-lg-6">
 	     
 	     	 
-	     	 		<h4>Exercise name:</h4>
+	     	 		<b>Exercise name:</b>
 	     	 		<p><?php echo $row->eqname;?></p>
-	     	 		<hr/>
-	     	 		<h4>Exercise Category:</h4>
+	     	 		
+	     	 		<b>Exercise Category:</b>
 	     	 		<p><?php echo $row->eqcat;?></p>
-	     	 		<hr/>
+	     	 	
 	     	 		</div>
 	     	 		<div class="col-lg-12">
 	     	 		<h4>Exercise details:</h4>

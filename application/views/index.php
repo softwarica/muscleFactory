@@ -136,9 +136,13 @@ color:white !important;
 		<div class="container">
 		    <div class="row content-middle">
 		      <!-- start content-middle -->
-	 	    	<div class="col-md-6 "><a href="pricing.html">
+		       <div class="card">
+     	 <a href="<?php echo base_url();?>controlVideo/getVideo">
+     	 <h3 class="m_2">Videos</h3></a></div>
+
+	 	    	<div class="col-md-6 "><a href="<?php echo base_url();?>controlVideo/getVideo">
 	 	    		<ul class="spinning">
-	 	    			<!-- <li class="live">live <span class="m_1">Spinning</span></li> -->
+	 	    			<li class="live">click <span class="m_1">for more</span></li>
 	 	    			<li class="room">just chill</li>
 	 	    			<div class="clear"></div>
 	 	    		</ul>
@@ -169,7 +173,7 @@ color:white !important;
 			   <!--   //another video -->
 			   	<div class="col-md-6 "><a href="<?php echo base_url();?>controlVideo/getVideo">
 	 	    		<ul class="spinning">
-	 	    			<!-- <li class="live">live <span class="m_1">Spinning</span></li> -->
+	 	    			<li class="live">click <span class="m_1">for more</span></li>
 	 	    			<li class="room">hudd hud dabang</li>
 	 	    			<div class="clear"></div>
 	 	    		</ul>
@@ -691,6 +695,8 @@ color:white !important;
 	       <div class="clear"></div>
 	      </div>
 	     </div>
+
+
 		</div>
 	    <div class="map">
 			<iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Kingdom&amp;aq=0&amp;oq=un&amp;sll=37.0625,-95.677068&amp;sspn=48.956293,107.138672&amp;ie=UTF8&amp;hq=&amp;hnear=United+Kingdom&amp;ll=55.378051,-3.435973&amp;spn=135.795411,68.554687&amp;t=m&amp;z=2&amp;output=embed"> </iframe><br><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=United+Kingdom&amp;aq=0&amp;oq=un&amp;sll=37.0625,-95.677068&amp;sspn=48.956293,107.138672&amp;ie=UTF8&amp;hq=&amp;hnear=United+Kingdom&amp;ll=55.378051,-3.435973&amp;spn=135.795411,68.554687&amp;t=m&amp;z=2" style="color:#666;font-size:12px;text-align:left"> </a></small>

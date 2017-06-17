@@ -1,11 +1,6 @@
 <?php include_once('link.php');?>
 <?php include_once('header.php');?>
-<style>
-video {
-    width: 100%;
-    height: auto;
-}
-</style>
+
 	<div class="panel panel-default">
 	<div class="panel panel-heading">
 		<h4 class="btn btn-link">Exercises videos</h4>

@@ -1,12 +1,6 @@
 <?php include_once('link.php');?>
 <?php include_once('header.php');?>
 
-<style>
-video {
-    width: 100%;
-    height: auto;
-}
-</style>
 	<?php
 if($chestexvideo->num_rows() > 0){
 	foreach($chestexvideo->result() as $row){

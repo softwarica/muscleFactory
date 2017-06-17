@@ -136,7 +136,7 @@ $this->modelAdmin->retriveMemberById($id);
 
 $result=$this->modelAdmin->retriveMemberById($id);
 $data['memberdetails']=$result;
-$this->load->view('admin/edit',$data);
+$this->load->view('admin/editmember',$data);
 }
 
 public function updateEditedMember(){

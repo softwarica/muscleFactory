@@ -28,6 +28,12 @@
 .thcolor{
   color: #00bff0 !important;
 }
+
+video {
+    width: 100%;
+    height: auto;
+}
+
 </style>
 <title></title>
 </head>

@@ -55,9 +55,10 @@ class ControlExercise extends CI_Controller{
 				$result=$this->modelExercise->retriveCategory();
 
 				$data['eqclass']=$result;
-				$this->load->view('admin/exercise',$data);
+				$this->load->view('admin/adminexercise',$data);
 
 				}
+
 
 
 				public function getExercise(){
@@ -101,6 +102,81 @@ class ControlExercise extends CI_Controller{
 			$this->load->view('searchExercise',$data);
 
 		}
+		public function getExerciseList(){
+			
+				$this->load->model('modelExercise');
+				$result=$this->modelExercise->retriveExercise();
+
+				$data['exerciselist']=$result;
+				$this->load->view('admin/exerciselist',$data);
+		}
+
+		public function removeExercise(){
+			$id=$this->input->get('id');
+			$this->load->model('modelExercise');
+			$this->modelExercise->deleteExercise($id);
+
+			$this->session->set_flashdata('delexmsg','exercise sucessfully delete from table exercise');
+			redirect('controlAdmin/index');
+		}
+
+		public function editExercise(){
+			$id=$this->input->get('id');
+			$this->load->model('modelExercise');
+			$result=$this->modelExercise->retriveExerciseById($id);
+			$resultcat=$this->modelExercise->retriveCategory();
+
+			$data['retriveexerciselist']=$result;
+			$data['eqclass']=$resultcat;
+			$this->load->view('admin/editexercise',$data);
 }
+	
+
+				public function editPicture(){
+	if(isset($_POST['btnsubmitimage'])){
+
+	$config['upload_path']="assets/images/exercises";
+		$config['allowed_types']  = 'gif|jpg|png';
+		$config['max-width']="100";
+		$config['max-height']="100";
+
+		$this->load->library('upload',$config);
+		$this->upload->do_upload('userfile');
+		$data=array('upload_data'=>$this->upload->data());
+		
+		$this->load->model('modelExercise');
+		
+// for delete of image
+	$id=$this->input->post('id');
+						$result=$this->modelExercise->retriveMemberById($id);
+	if($result->num_rows() > 0){
+		foreach($result->result() as $row){
+				$filename=$row->eqimage;
+
+						$path=base_url().'assets/images/exercises/'.$filename;
+				unlink($path);
+			
+
+			
+		}
+	}
+// ............................
+
+	$image=$data['upload_data']['file_name'];
+
+	
+	$this->modelExercise->updateImage($id,$image);
+
+	// $result=$this->modelAdmin->retriveMemberById($id);
+	$this->session->set_flashData('image_update','image sucessfully update');
+	redirect('controlAdmin/index');
+
+	// $data['image_update']='image sucessfull update';
+	// $this->load->view('admin/adminPage',$data);
+}
+
+
+}
+			}
 
 ?>

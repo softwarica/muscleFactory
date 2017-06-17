@@ -22,6 +22,11 @@ class ModelExercise extends CI_Model{
 
 			return $this->db->get('tblexercise');
 		}
+		public function retriveExerciseById($id){
+			$this->db->where('id',$id);
+			return $this->db->get('tblexercise');
+		}
+
 
 		public function retriveChestExercise(){
 			$this->db->where('eqcat','chest');
@@ -37,6 +42,23 @@ class ModelExercise extends CI_Model{
 			$this->db->like('eqname',$forsearch);
 			return $this->db->get('tblexercise');
 		}
+		public function deleteExercise($id){
+			$this->db->where('id',$id);
+			$this->db->delete('tblexercise');
+		}
+		public function updateImage($id,$image){
+	$arr=array(
+		'id'=>$id,
+		'eqimage'=>$image
+		);
+	$this->db->where('id',$id);
+	$this->db->update('tblexercise',$arr);
+}
+public function retriveMemberById($id){
+	$this->db->where("id",$id);
+	$result=$this->db->get("tblexercise");
+	return $result;
+}
 }
 
 ?>

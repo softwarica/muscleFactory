@@ -50,7 +50,7 @@ class ControlVideo extends CI_controller{
 				$result=$this->modelVideo->retriveCategory();
 
 				$data['vdclass']=$result;
-				$this->load->view('admin/videos',$data);
+				$this->load->view('admin/adminvideos',$data);
 
 				}
 
