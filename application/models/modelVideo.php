@@ -30,5 +30,10 @@ class ModelVideo extends CI_Model{
 	$this->db->where('id',$id);
 	$this->db->update('tblexercise',$arr);
 }
+
+			public function retriveChestVideo($id){
+			$this->db->where('id',$id);
+			return $this->db->get('tblexercise');
+		}
 }
 ?>

@@ -80,17 +80,17 @@ class ControlExercise extends CI_Controller{
 
 		}
 
-		public function getChestVideo(){
-			$id=$this->input->get('id');
+		// public function getChestVideo(){
+		// 	$id=$this->input->get('id');
 			
-			$this->load->model('modelExercise');
-			$result=$this->modelExercise->retriveChestVideo($id);
+		// 	$this->load->model('modelExercise');
+		// 	$result=$this->modelExercise->retriveChestVideo($id);
 
-			$data['chestexvideo']=$result;
+		// 	$data['chestexvideo']=$result;
 			
 
-			$this->load->view('chestVideo',$data);
-		}
+		// 	$this->load->view('chestVideo',$data);
+		// }
 
 		public function searchExercise(){
 			$forsearch=$this->input->post('forsearch');

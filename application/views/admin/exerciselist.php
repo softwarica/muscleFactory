@@ -84,10 +84,16 @@ if($exerciselist->num_rows() > 0){
       	 	<?php	
 }
 }
+else{
+?>
+<h4 align="center">no data found</h4>
+<?php
+}
 	?>
 
 
 
      </div>
+
 </div>
 </div>

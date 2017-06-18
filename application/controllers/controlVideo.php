@@ -112,6 +112,18 @@ class ControlVideo extends CI_controller{
 	// $this->load->view('admin/adminPage',$data);
 }
 }
+		
+		public function getChestVideo(){
+			$id=$this->input->get('id');
+			
+			$this->load->model('modelVideo');
+			$result=$this->modelVideo->retriveChestVideo($id);
+
+			$data['chestexvideo']=$result;
+			
+
+			$this->load->view('chestVideo',$data);
+		}
 
 }
 

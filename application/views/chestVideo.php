@@ -14,7 +14,7 @@ if($chestexvideo->num_rows() > 0){
 	
 
 
-	<div class="col-md-12 " id="menu">
+	<div class="col-md-6 col-lg-offset-3 " id="menu">
 
 					 <div class="view view-fifth">
 				  	  	<video  width="auto" height="450" controls>

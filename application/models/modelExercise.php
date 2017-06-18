@@ -33,11 +33,11 @@ class ModelExercise extends CI_Model{
 			return $this->db->get('tblexercise');
 
 		}
-		public function retriveChestVideo($id){
-			$this->db->where('id',$id);
-			return $this->db->get('tblexercise');
+		// public function retriveChestVideo($id){
+		// 	$this->db->where('id',$id);
+		// 	return $this->db->get('tblexercise');
 
-		}
+		// }
 		public function retriveSearchExercise($forsearch){
 			$this->db->like('eqname',$forsearch);
 			return $this->db->get('tblexercise');

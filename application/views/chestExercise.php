@@ -23,7 +23,7 @@ if($chestexercise->num_rows() > 0){
 	     	 		
 	     	 		<img src="<?php echo base_url();?>assets/images/exercises/<?php echo $row->eqimage;?>" alt="" class="img-responsive" >
 	     	 		<div class="btn2">
-					   <a href="<?php echo base_url();?>controlExercise/getChestVideo?id=<?php echo $row->id;?>">click for video</a>
+					   <a href="<?php echo base_url();?>controlVideo/getChestVideo?id=<?php echo $row->id;?>">click for video</a>
 					</div>
 	     	 		
 	     	 </div>
