@@ -35,6 +35,12 @@ class ControlWelcome extends CI_Controller {
 	{
 		$this->load->view('admin/adminPage');
 	}
+	public function goToTrainer(){
+		$this->load->view('trainer/trainerPage');
+	}
+	public function goToLogin(){
+		$this->load->view('loginform');
+	}
 }
 
 	

@@ -12,7 +12,7 @@ if($retriveexerciselist->num_rows() > 0){
   foreach($retriveexerciselist->result() as $row){
 ?>
 
-<form class="" action="<?php echo base_url();?>controlExercise/editExercise" method="post">
+<form class="" action="<?php echo base_url();?>controlExercise/updateEditedExercise" method="post">
 <div class="col-lg-6">
 <div class="form-group">
     <input type="hidden" name="id" class="form-control" id="id" required="required" value="<?php echo $row->id; ?>">

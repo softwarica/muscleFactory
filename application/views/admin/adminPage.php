@@ -61,6 +61,7 @@
                   echo $this->session->flashdata('delexmsg');
                   echo $this->session->flashdata('image_update');
                   echo $this->session->flashdata('video_update');
+                  echo $this->session->flashdata('exercise_update');
                   // if(isset($_GET['id'])){
                   //   // echo "<script type='text/javascript'>alert('$delete_message');</script>";
                   //   echo $delete_message;

@@ -55,6 +55,17 @@ class ModelExercise extends CI_Model{
 	$this->db->update('tblexercise',$arr);
 }
 
+public function updateExercise($id,$eqname,$eqcat,$eqdetails){
+$arr=array(
+'id'=>$id,
+'eqname'=>$eqname,
+'eqcat'=>$eqcat,
+'eqdetails'=>$eqdetails
+	);
+$this->db->where('id',$id);
+$this->db->update('tblexercise',$arr);
+
+}
 }
 
 ?>

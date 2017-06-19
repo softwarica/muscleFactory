@@ -184,6 +184,19 @@ class ControlExercise extends CI_Controller{
 
 
 }
+
+public function updateEditedExercise(){
+	$id=$this->input->post('id');
+	$eqname=$this->input->post('eqname');
+	$eqcat=$this->input->post('eqcat');
+	$eqdetails=$this->input->post('eqdetails');
+
+	$this->load->model('modelExercise');
+	$this->modelExercise->updateExercise($id,$eqname,$eqcat,$eqdetails);
+
+	$this->session->set_flashData('exercise_update','exercise sucessfully update');
+	redirect('controlAdmin/index');
+}
 			}
 
 ?>
