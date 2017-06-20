@@ -20,8 +20,13 @@ class ModelVideo extends CI_Model{
 			public function retriveVideoById($id){
 					$this->db->where('id',$id);
 					return $this->db->get('tblexercise');
-
 			}
+			public function retriveTblVideoById($id){
+					$this->db->where('id',$id);
+					return $this->db->get('tblvideo');
+			}
+
+
 			public function updateVideo($id,$video){
 	$arr=array(
 		'id'=>$id,
@@ -30,10 +35,35 @@ class ModelVideo extends CI_Model{
 	$this->db->where('id',$id);
 	$this->db->update('tblexercise',$arr);
 }
+		public function updateTblVideo($id,$video){
+			$arr=array(
+		'id'=>$id,
+		'video'=>$video
+		);
+	$this->db->where('id',$id);
+	$this->db->update('tblvideo',$arr);
+		}
 
 			public function retriveChestVideo($id){
 			$this->db->where('id',$id);
 			return $this->db->get('tblexercise');
 		}
+
+		public function deleteVideo($id){
+			$this->db->where('id',$id);
+			$this->db->delete('tblvideo');
+		}
+
+		
+					public function updateVideoDetails($id,$vname,$vcat){
+			$arr=array(
+			'id'=>$id,
+			'vname'=>$vname,
+			'vcat'=>$vcat
+				);
+			$this->db->where('id',$id);
+			$this->db->update('tblvideo',$arr);
+
+			}
 }
 ?>

@@ -69,6 +69,9 @@
                      echo $this->session->flashdata('imginsertmsg');
                       echo $this->session->flashdata('tblimage_update');
                        echo $this->session->flashdata('delimgmsg');
+                       echo $this->session->flashdata('delvdomsg');
+                         echo $this->session->flashdata('video_dtl_update');
+                       echo $this->session->flashdata('image_dtl_update');
                      
                   // if(isset($_GET['id'])){
                   //   // echo "<script type='text/javascript'>alert('$delete_message');</script>";
@@ -141,6 +144,7 @@
                <div id="menu5" class="tab-pane fade">
               <div id="videoslistcontent"></div>
                </div>
+
                <div id="menu6" class="tab-pane fade">
                  <?php
                  $this->load->view('admin/dashboard');

@@ -130,7 +130,7 @@ public function removeImage(){
 }
 
 
-public function editImage(){
+public function editImageDetails(){
 
 		$id=$this->input->get('id');
 			$this->load->model('modelImage');
@@ -151,7 +151,7 @@ public function updateEditedImageDEtails(){
 	$this->load->model('modelImage');
 	$this->modelImage->updateImageDetails($id,$iname,$icat);
 
-	$this->session->set_flashData('image_update','image sucessfully update');
+	$this->session->set_flashData('image_dtl_update','image details sucessfully update');
 	redirect('controlAdmin/index');
 }
 }

@@ -10,13 +10,13 @@
 if($imagelist->num_rows() > 0){
 	foreach($imagelist->result() as $row){
 	?>
-	<div class="col-lg-6 card" style="margin-top:15px;height:300px;">
+	<div class="col-lg-4 card" style="margin-top:15px;height:400px;">
 
      	 <!-- <div class="events"> -->
-     	 <div class="col-lg-6">
+     	 <div class="col-lg-12">
      	 	
 	     	 		
-	     	 		<img src="<?php echo base_url();?>assets/images/<?php echo $row->image;?>" alt="" class="img-responsive" style="height:150px;" >
+	     	 		<img src="<?php echo base_url();?>assets/images/<?php echo $row->image;?>" alt="" class="img-responsive"/>
 	     	 		 <form class="" action="<?php echo base_url();?>controlImage/editPicture" method="post" id="myForm" name="myForm" enctype="multipart/form-data" accept-charset="utf-8">
 			        <input type="hidden" name="id" value="<?php echo $row->id;?>"/>
 			        <input type="file" name="userfile" id="image" required="required" class="form-control"/>
@@ -38,10 +38,10 @@ if($imagelist->num_rows() > 0){
 	     	 		<p><?php echo $row->icat;?></p>
 	
 	     	 		</div>
-			<div class="col-lg-12 btn2">
+			<div class="col-lg-6 btn2" style="margin-top:70px;">
 		
 					    <a onclick="return confirm('Do you want to delete?')" href="<?php echo base_url();?>controlImage/removeImage?id=<?php echo $row->id; ?>">delete</a>
-			<a href="<?php echo base_url();?>controlImage/editImage?id=<?php echo $row->id;?>">edit</a>
+			<a href="<?php echo base_url();?>controlImage/editImageDetails?id=<?php echo $row->id;?>">edit</a>
 		
 					</div>
 			
