@@ -19,8 +19,8 @@ font-size: 12px !important;
      <img src="<?php echo base_url();?>assets/images/logo/exercise.png" class="img-responsive" style="height:50px;"/>
      <h4 style="color:#337ab7">Exercise</h4>
   </a></li>
-  <li><a data-toggle="pill" href="#image" class="btn btn-link">
-     <img src="<?php echo base_url();?>assets/images/logo/manage.png" class="img-responsive" style="height:50px;"/>
+   <li><a data-toggle="pill" href="#img" class="btn btn-link">
+     <img src="<?php echo base_url();?>assets/images/logo/exercise.png" class="img-responsive" style="height:50px;"/>
      <h4 style="color:#337ab7">images</h4>
   </a></li>
   <li><a data-toggle="pill" href="#video" class="btn btn-link">
@@ -55,9 +55,13 @@ font-size: 12px !important;
   <div id="exercise" class="tab-pane fade">
       <div id="exercisePage"></div>
   </div>
-
-  <div id="image" class="tab-pane fade">
-   
+     <script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#imagePage").load("<?php echo base_url();?>controlImage/getCategory");
+                        })
+                        </script>
+  <div id="img" class="tab-pane fade">
+   <div id="imagePage"></div>
   </div>
                       <script type="text/javascript">
                         $(document).ready(function(){

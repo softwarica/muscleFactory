@@ -90,6 +90,7 @@ redirect('controlAdmin/index');
 
 }
 
+
 public function convert_lowercase() {
   return strtolower($this->input->post('mname'));
 }

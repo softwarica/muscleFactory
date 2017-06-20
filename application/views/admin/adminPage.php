@@ -37,7 +37,7 @@
                <li class="active"><a data-toggle="pill" href="#home">DASHBOARD</a></li>
                <li><a data-toggle="pill" href="#menu1">MEMBERS LIST</a></li>
                <li><a data-toggle="pill" href="#menu2">EXERCISE LIST</a></li>
-               <li><a data-toggle="pill" href="#menu3">PAYMENT</a></li>
+               <li><a data-toggle="pill" href="#menu3">TRAINER LIST</a></li>
                <li><a data-toggle="pill" href="#menu4">STATUS</a></li>
                <li><a data-toggle="pill" href="#menu5">LOGOUT</a></li>
              </ul>
@@ -62,6 +62,10 @@
                   echo $this->session->flashdata('image_update');
                   echo $this->session->flashdata('video_update');
                   echo $this->session->flashdata('exercise_update');
+                  echo $this->session->flashdata('inserttrainermsg');
+                   echo $this->session->flashdata('delete_trainer_message');
+                    echo $this->session->flashdata('edit_trainer_message');
+                     echo $this->session->flashdata('imginsertmsg');
                   // if(isset($_GET['id'])){
                   //   // echo "<script type='text/javascript'>alert('$delete_message');</script>";
                   //   echo $delete_message;
@@ -106,13 +110,15 @@
                </div>
 
 
-
+                <script type="text/javascript">
+            $(document).ready(function(){
+                $("#trainerlistcontent").load("<?php echo base_url();?>controlTrainer/getTrainerList");
+            })
+            </script>
                <div id="menu3" class="tab-pane fade">
-                 <?php
-                 $this->load->view('admin/dashboard');
-                 ?>
-
+                 <div id="trainerlistcontent"></div>
                </div>
+
                <div id="menu4" class="tab-pane fade">
                  <?php
                  $this->load->view('admin/dashboard');

@@ -8,7 +8,7 @@
 
 <!-- < --><!-- ?php echo form_open_multipart('controlAdmin/newMember');?> 
 <form action="http://localhost/muscleFactory/index.php/controlAdmin/newMember" enctype="multipart/form-data" method="post" accept-charset="utf-8"> -->
-<form class="" action="<?php echo base_url();?>controlAdmin/newMember" method="post" name="myForm" enctype="multipart/form-data" accept-charset="utf-8">
+<form class="" action="<?php echo base_url();?>controlTrainer/newTrainer" method="post" name="myForm" enctype="multipart/form-data" accept-charset="utf-8">
 <div class="col-lg-6" >
            <div class="form-group">
             <label for="tname">Trainer Name:</label>
@@ -72,7 +72,7 @@
     </div>
      
     <div class="panel panel-footer">
-    <input type="submit" name="btnsubmit" id="btnsubmit" value="submit" onclick="return confirm('Do you want to register member?')" class="btn btn-success center-block" >
+    <input type="submit" name="btnsubmit" id="btnsubmit" value="submit" onclick="return confirm('Do you want to register trainer?')" class="btn btn-success center-block" >
     </div>
 </div>
 </form>
