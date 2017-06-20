@@ -38,8 +38,9 @@
                <li><a data-toggle="pill" href="#menu1">MEMBERS LIST</a></li>
                <li><a data-toggle="pill" href="#menu2">EXERCISE LIST</a></li>
                <li><a data-toggle="pill" href="#menu3">TRAINER LIST</a></li>
-               <li><a data-toggle="pill" href="#menu4">STATUS</a></li>
-               <li><a data-toggle="pill" href="#menu5">LOGOUT</a></li>
+                <li><a data-toggle="pill" href="#menu4">IMAGES LIST</a></li>
+                 <li><a data-toggle="pill" href="#menu5">VIDEOS LIST</a></li>
+               <li><a data-toggle="pill" href="#menu6">LOGOUT</a></li>
              </ul>
                
              <script type="text/javascript" src="<?php echo base_url();?>assets/js/nav.js"></script>
@@ -66,6 +67,9 @@
                    echo $this->session->flashdata('delete_trainer_message');
                     echo $this->session->flashdata('edit_trainer_message');
                      echo $this->session->flashdata('imginsertmsg');
+                      echo $this->session->flashdata('tblimage_update');
+                       echo $this->session->flashdata('delimgmsg');
+                     
                   // if(isset($_GET['id'])){
                   //   // echo "<script type='text/javascript'>alert('$delete_message');</script>";
                   //   echo $delete_message;
@@ -119,13 +123,25 @@
                  <div id="trainerlistcontent"></div>
                </div>
 
+                  <script type="text/javascript">
+            $(document).ready(function(){
+                $("#imageslistcontent").load("<?php echo base_url();?>controlImage/getImageList");
+            })
+            </script>
                <div id="menu4" class="tab-pane fade">
-                 <?php
-                 $this->load->view('admin/dashboard');
-                 ?>
+                <div id="imageslistcontent"></div>
 
                </div>
+
+               <script type="text/javascript">
+            $(document).ready(function(){
+                $("#videoslistcontent").load("<?php echo base_url();?>controlvideo/getVideoList");
+            })
+            </script>
                <div id="menu5" class="tab-pane fade">
+              <div id="videoslistcontent"></div>
+               </div>
+               <div id="menu6" class="tab-pane fade">
                  <?php
                  $this->load->view('admin/dashboard');
                  ?>

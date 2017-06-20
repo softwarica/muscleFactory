@@ -56,5 +56,103 @@ class ControlImage extends CI_Controller{
 
  }
 
+ 	public function getImageList(){
+			
+				$this->load->model('modelImage');
+				$result=$this->modelImage->retriveImage();
+
+				$data['imagelist']=$result;
+				$this->load->view('admin/imagelist',$data);
+		}
+
+	
+
+	public function editPicture(){
+	if(isset($_POST['btnsubmitimage'])){
+
+	$config['upload_path']="assets/images";
+		$config['allowed_types']  = 'gif|jpg|png';
+		$config['max-width']="100";
+		$config['max-height']="100";
+
+		$this->load->library('upload',$config);
+		// $this->upload->do_upload('userfile');
+		 if ( ! $this->upload->do_upload('userfile'))
+                {
+                        $error = array('error' => $this->upload->display_errors());
+
+                        print_r($error);
+                        die();
+                }
+		$data=array('upload_data'=>$this->upload->data());
+		
+		$this->load->model('modelImage');
+		
+// for delete of image
+	$id=$this->input->post('id');
+	$result=$this->modelImage->retriveImageById($id);
+	if($result->num_rows() > 0){
+		foreach($result->result() as $row){
+				$filename=$row->image;
+
+						$path='C:/xampp/htdocs/muscleFactory/assets/images/'.$filename;
+				unlink($path);
+			
+
+			
+		}
+	}
+// ............................
+
+	$image=$data['upload_data']['file_name'];
+
+	
+	$this->modelImage->updateImage($id,$image);
+
+	// $result=$this->modelAdmin->retriveMemberById($id);
+	$this->session->set_flashData('tblimage_update','image sucessfully update');
+	redirect('controlAdmin/index');
+
+	// $data['image_update']='image sucessfull update';
+	// $this->load->view('admin/adminPage',$data);
+}
+
+
+}
+
+public function removeImage(){
+	$id=$this->input->get('id');
+	$this->load->model('modelImage');
+	$this->modelImage->deleteImage($id);
+
+		$this->session->set_flashdata('delimgmsg','image sucessfully delete from table image');
+			redirect('controlAdmin/index');
+}
+
+
+public function editImage(){
+
+		$id=$this->input->get('id');
+			$this->load->model('modelImage');
+			$result=$this->modelImage->retriveImageById($id);
+			$resultcat=$this->modelImage->retriveCategory();
+
+			$data['retriveimagelist']=$result;
+			$data['iclass']=$resultcat;
+			$this->load->view('admin/editimagedetails',$data);
+	
+}
+
+public function updateEditedImageDEtails(){
+	$id=$this->input->post('id');
+	$iname=$this->input->post('iname');
+	$icat=$this->input->post('icat');
+
+	$this->load->model('modelImage');
+	$this->modelImage->updateImageDetails($id,$iname,$icat);
+
+	$this->session->set_flashData('image_update','image sucessfully update');
+	redirect('controlAdmin/index');
+}
 }
 ?>
