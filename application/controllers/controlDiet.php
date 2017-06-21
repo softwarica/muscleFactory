@@ -48,6 +48,14 @@ class ControlDiet extends CI_Controller{
 			$this->session->set_flashdata('dietinsertmsg','data sucessfully insert into table diet');
 			redirect('controlWelcome/goToTrainer');
 			}
+				public function getDietList(){
+			
+				$this->load->model('modelDiet');
+				$result=$this->modelDiet->retriveDiet();
+
+				$data['dietlist']=$result;
+				$this->load->view('trainer/dietlist',$data);
+		}
 }
 
 ?>

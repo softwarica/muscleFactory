@@ -18,7 +18,8 @@
                <li class="active"><a data-toggle="pill" href="#home">DASHBOARD</a></li>
                <li><a data-toggle="pill" href="#menu1">MEMBERS LIST</a></li>
                <li><a data-toggle="pill" href="#menu2">EXERCISE LIST</a></li>
-               <li><a data-toggle="pill" href="#menu3">LOGOUT</a></li>
+               <li><a data-toggle="pill" href="#menu3">DIET LIST</a></li>
+               <li><a href="">LOGOUT</a></li>
              </ul>
                
              <script type="text/javascript" src="<?php echo base_url();?>assets/js/nav.js"></script>
@@ -28,6 +29,7 @@
 
            </div>
            </div>
+
            <div class="col-lg-12">
              <h3 align="center" style="color:red; font-size:15px;">
                   <?php 
@@ -46,6 +48,8 @@
                      
                    </h3>
                    </div>
+
+
              <div class="tab-content main" id="menu">
              
                <div id="home" class="tab-pane fade in active">
@@ -73,17 +77,20 @@
                <div id="exerciselistcontent"></div>
                </div>
 
-               </div>
+                 <script type="text/javascript">
+            $(document).ready(function(){
+                $("#dietlistcontent").load("<?php echo base_url();?>controlDiet/getDietList");
+            })
+            </script>
                <div id="menu3" class="tab-pane fade">
-              
-
-               </div>
+               <div id="dietlistcontent"></div>
              </div>
+               </div>
+               
 
 
 
 <div>
-  
   <?php
 $this->load->view("footer");
   ?>

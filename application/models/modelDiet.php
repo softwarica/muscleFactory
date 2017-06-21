@@ -11,6 +11,10 @@ class ModelDiet extends CI_Model{
 				);
 			$this->db->insert('tbldiet',$arr);
 	}
+	public function retriveDiet(){
+
+			return $this->db->get('tbldiet');
+		}
 }
 
 ?>
