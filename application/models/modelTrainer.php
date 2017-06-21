@@ -18,6 +18,15 @@ $arr=array(
 $this->db->insert("tbltrainer",$arr);
 
 }
+public function retriveMember(){
+  $result=$this->db->get("tblregister");
+  return $result;
+}
+public function retriveMemberById($id){
+	$this->db->where("id",$id);
+	$result=$this->db->get("tblregister");
+	return $result;
+}
 	public function retriveCategory(){
 		return $this->db->get('tblexcategory');
 		}

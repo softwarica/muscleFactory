@@ -56,7 +56,7 @@
 
                <script type="text/javascript">
             $(document).ready(function(){
-                $("#memberlistcontent").load("<?php echo base_url();?>controlAdmin/getMember");
+                $("#memberlistcontent").load("<?php echo base_url();?>controlTrainer/getMember");
             })
             </script>
 

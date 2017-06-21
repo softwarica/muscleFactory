@@ -180,6 +180,26 @@ redirect('controlAdmin/index');
 
 }
 
+public function getMember(){
+$this->load->model("modelTrainer");
+$result=$this->modelTrainer->retriveMember();
+
+$data['memberlist']=$result;
+ $this->load->view('trainer/memberlist',$data);
+}
+public function viewDetails(){
+	$id=$this->input->get('id');
+	$this->load->model('modelTrainer');
+	$result=$this->modelTrainer->retriveMemberById($id);
+
+	$data['viewdetails']=$result;
+	$this->load->view('trainer/memberdetails',$data);
+}
+
+public function dietForm(){
+	$this->load->view('trainer/trainerdiet');
+}
+
 }
 
 
