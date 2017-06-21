@@ -16,10 +16,9 @@ class ControlCheck extends CI_Controller{
 					$dbpword=$row->pword;
 					
 						
-						$this->session->set_userdata('sess_uname',$dbuname);
-						$this->session->set_userdata('sess_id',$dbid);
+				
 					if($dbpword==$pword && $dbuname==$uname){
-
+						$this->session->set_userdata('sess_id_for_trainer',$dbid);
 						redirect('controlWelcome/goToTrainer');
 						die();
 					}

@@ -52,7 +52,7 @@ if($dietlist->num_rows() > 0){
 
 			<div class="col-lg-12 btn2">
 		
-					    <a onclick="return confirm('Do you want to delete?')" href="<?php echo base_url();?>controlDiet/removeExercise?id=<?php echo $row->id; ?>">delete</a>
+					    <a onclick="return confirm('Do you want to delete?')" href="<?php echo base_url();?>controlDiet/removeDiet?id=<?php echo $row->id; ?>">delete</a>
 			<a href="<?php echo base_url();?>controlDiet/editExercise?id=<?php echo $row->id;?>">edit</a>
 		
 					</div>

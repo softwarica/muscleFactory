@@ -1,3 +1,8 @@
+<?php
+if(!isset($this->session->userdata['sess_id_for_trainer'])){
+  redirect('controlWelcome/goToLogin');
+}
+?>
 <html>
 <?php $this->load->view("link"); ?>
 <body>
@@ -19,7 +24,7 @@
                <li><a data-toggle="pill" href="#menu1">MEMBERS LIST</a></li>
                <li><a data-toggle="pill" href="#menu2">EXERCISE LIST</a></li>
                <li><a data-toggle="pill" href="#menu3">DIET LIST</a></li>
-               <li><a href="">LOGOUT</a></li>
+               <li><a href="<?php echo base_url();?>controlCheck/destroySession">LOGOUT</a></li>
              </ul>
                
              <script type="text/javascript" src="<?php echo base_url();?>assets/js/nav.js"></script>
@@ -43,7 +48,7 @@
                   echo $this->session->flashdata('image_update');
                   echo $this->session->flashdata('video_update');
                   echo $this->session->flashdata('exercise_update');
-                 
+                  echo $this->session->flashdata('dietinsertmsg');
                    ?>
                      
                    </h3>

@@ -115,7 +115,7 @@ public function removeMember(){
 				$filename=$row->image;
 				
 				
-				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
+				$path=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/members/'.$filename;
 				unlink($path);
 			
 		}

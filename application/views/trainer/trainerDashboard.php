@@ -39,7 +39,7 @@ font-size: 12px !important;
                             $("#dietreg").load("<?php echo base_url();?>controlTrainer/dietForm");
                         })
                         </script>
-         <div id="diet" class="tab-pane fade in active">
+         <div id="diet" class="tab-pane fade">
       <div id="dietreg"></div>
   </div>
 

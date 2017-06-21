@@ -1,6 +1,6 @@
 
 <?php
-if(!isset($this->session->userdata['sess_id'])) {
+if(!isset($this->session->userdata['sess_id']) && !isset($this->session->userdata['sess_id_for_trainer'])){
 
   redirect('controlWelcome/goToLogin');
 }

@@ -15,6 +15,17 @@ class ModelDiet extends CI_Model{
 
 			return $this->db->get('tbldiet');
 		}
+
+		public function retriveDietById($id){
+			$this->db->where('id',$id);
+			return $this->db->get('tbldiet');
+		}
+
+		public function deleteDiet($id){
+			$this->db->where('id',$id);
+			$this->db->delete('tbldiet');
+		}
+
 }
 
 ?>

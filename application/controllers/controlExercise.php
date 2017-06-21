@@ -121,8 +121,13 @@ class ControlExercise extends CI_Controller{
 			$this->modelExercise->deleteExercise($id);
 
 			$this->session->set_flashdata('delexmsg','exercise sucessfully delete from table exercise');
-			redirect('controlAdmin/index');
-		}
+			if(!isset($this->session->userdata['sess_id'])) {
+
+				  redirect('controlWelcome/goToTrainer');
+				}else{
+					redirect('controlAdmin/index');}
+				}
+		
 
 		public function editExercise(){
 			$id=$this->input->get('id');
@@ -180,7 +185,11 @@ class ControlExercise extends CI_Controller{
 
 	// $result=$this->modelAdmin->retriveMemberById($id);
 	$this->session->set_flashData('image_update','image sucessfully update');
-	redirect('controlAdmin/index');
+	if(!isset($this->session->userdata['sess_id'])) {
+
+  redirect('controlWelcome/goToTrainer');
+}else{
+	redirect('controlAdmin/index');}
 
 	// $data['image_update']='image sucessfull update';
 	// $this->load->view('admin/adminPage',$data);
@@ -199,8 +208,13 @@ public function updateEditedExercise(){
 	$this->modelExercise->updateExercise($id,$eqname,$eqcat,$eqdetails);
 
 	$this->session->set_flashData('exercise_update','exercise sucessfully update');
-	redirect('controlAdmin/index');
+	if(!isset($this->session->userdata['sess_id'])) {
+
+  redirect('controlWelcome/goToTrainer');
+}else{
+	redirect('controlAdmin/index');}
 }
-			}
+
+}
 
 ?>

@@ -56,6 +56,41 @@ class ControlDiet extends CI_Controller{
 				$data['dietlist']=$result;
 				$this->load->view('trainer/dietlist',$data);
 		}
+
+		public function removeDiet(){
+			$id=$this->input->get('id');
+
+			$this->load->model('modelDiet');
+			$this->modelDiet->deletediet($id);
+			$result=$this->modelDiet->retriveDietById($id);
+				if($result->num_rows() > 0){
+		foreach($result->result() as $row){
+				$filename=$row->dimage;
+				
+				
+				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
+				unlink($path);
+			
+		}
+	}
+
+			// if($result->num_rows() > 0){
+			// 	foreach($result->result() as $row){
+			// 		$filename=$row->dimage;
+			// 		$videoname=$row->dvideo;
+			// 		$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
+			// 	unlink($path);
+			// 	// $path=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/diets/'.$filename;
+				
+				
+			
+			// 	// unlik($path);
+				
+			// 	}
+			// }
+
+
+		}
 }
 
 ?>

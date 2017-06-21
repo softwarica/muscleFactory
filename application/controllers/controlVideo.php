@@ -106,7 +106,12 @@ class ControlVideo extends CI_controller{
 
 	// $result=$this->modelAdmin->retriveMemberById($id);
 	$this->session->set_flashData('video_update','video sucessfully update');
-	redirect('controlAdmin/index');
+	if(!isset($this->session->userdata['sess_id'])) {
+
+  redirect('controlWelcome/goToTrainer');
+}else{
+	redirect('controlAdmin/index');}
+
 
 	// $data['image_update']='image sucessfull update';
 	// $this->load->view('admin/adminPage',$data);
