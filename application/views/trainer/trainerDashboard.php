@@ -44,8 +44,12 @@ font-size: 12px !important;
   </div>
 
  
-
+<script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#schedulepage").load("<?php echo base_url();?>controlSchedule/goToSchedule");
+                        })
+                        </script>
   <div id="schedule" class="tab-pane fade">
-  
+  <div id="schedulepage"></div>
   </div>
   </div>

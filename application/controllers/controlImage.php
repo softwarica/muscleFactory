@@ -95,8 +95,11 @@ class ControlImage extends CI_Controller{
 		foreach($result->result() as $row){
 				$filename=$row->image;
 
-						$path='C:/xampp/htdocs/muscleFactory/assets/images/'.$filename;
-				unlink($path);
+				// 		$path='C:/xampp/htdocs/muscleFactory/assets/images/'.$filename;
+				// unlink($path);
+				$path=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/'.$filename;
+				unlink($path);	
+
 			
 
 			

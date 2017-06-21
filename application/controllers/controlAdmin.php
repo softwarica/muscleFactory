@@ -197,9 +197,11 @@ public function editPicture(){
 	if($result->num_rows() > 0){
 		foreach($result->result() as $row){
 				$filename=$row->image;
-								
-				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
-				unlink($path);
+						
+				$path=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/members/'.$filename;
+				unlink($path);		
+				// $path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
+				// unlink($path);
 
 			
 		}

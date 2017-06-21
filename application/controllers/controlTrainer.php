@@ -155,8 +155,10 @@ redirect('controlAdmin/index');
 		foreach($result->result() as $row){
 				$filename=$row->image;
 
-						$path='C:/xampp/htdocs/muscleFactory/assets/images/trainers/'.$filename;
-				unlink($path);
+				// 		$path='C:/xampp/htdocs/muscleFactory/assets/images/trainers/'.$filename;
+				// unlink($path);
+				$path=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/trainers/'.$filename;
+				unlink($path);	
 			
 
 			

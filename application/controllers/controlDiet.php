@@ -61,18 +61,25 @@ class ControlDiet extends CI_Controller{
 			$id=$this->input->get('id');
 
 			$this->load->model('modelDiet');
-			$this->modelDiet->deletediet($id);
+			
 			$result=$this->modelDiet->retriveDietById($id);
 				if($result->num_rows() > 0){
-		foreach($result->result() as $row){
-				$filename=$row->dimage;
+					foreach($result->result() as $row){
+				$imagename=$row->dimage;
+				$videoname=$row->dvideo;
 				
 				
-				$path='C:/xampp/htdocs/muscleFactory/assets/images/members/'.$filename;
-				unlink($path);
+				$imagepath=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/diets/'.$imagename;
+				unlink($imagepath);
+				$videopath=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/diets/'.$videoname;
+				unlink($videopath);
 			
 		}
 	}
+	$this->modelDiet->deletediet($id);
+	
+		$this->session->set_flashdata('dietdeletemsg','data sucessfully delete from table diet');
+			redirect('controlWelcome/goToTrainer');
 
 			// if($result->num_rows() > 0){
 			// 	foreach($result->result() as $row){

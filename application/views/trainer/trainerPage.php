@@ -49,6 +49,7 @@ if(!isset($this->session->userdata['sess_id_for_trainer'])){
                   echo $this->session->flashdata('video_update');
                   echo $this->session->flashdata('exercise_update');
                   echo $this->session->flashdata('dietinsertmsg');
+                  echo $this->session->flashdata('dietdeletemsg');
                    ?>
                      
                    </h3>

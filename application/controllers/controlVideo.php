@@ -90,8 +90,10 @@ class ControlVideo extends CI_controller{
 		foreach($result->result() as $row){
 				$filename=$row->eqvideo;
 
-						$path='C:/xampp/htdocs/muscleFactory/assets/images/exercises/'.$filename;
-				unlink($path);
+				// 		$path='C:/xampp/htdocs/muscleFactory/assets/images/exercises/'.$filename;
+				// unlink($path);
+				$path=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/exercises/'.$filename;
+				unlink($path);	
 			
 
 			
@@ -141,9 +143,10 @@ class ControlVideo extends CI_controller{
 		foreach($result->result() as $row){
 				$filename=$row->video;
 
-						$path='C:/xampp/htdocs/muscleFactory/assets/videos/'.$filename;
-				unlink($path);
-			
+				// 		$path='C:/xampp/htdocs/muscleFactory/assets/videos/'.$filename;
+				// unlink($path);
+			$path=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/videos/'.$filename;
+				unlink($path);	
 
 			
 		}

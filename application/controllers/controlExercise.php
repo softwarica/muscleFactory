@@ -169,8 +169,10 @@ class ControlExercise extends CI_Controller{
 		foreach($result->result() as $row){
 				$filename=$row->eqimage;
 
-						$path='C:/xampp/htdocs/muscleFactory/assets/images/exercises/'.$filename;
-				unlink($path);
+				// 		$path='C:/xampp/htdocs/muscleFactory/assets/images/exercises/'.$filename;
+				// unlink($path);
+					$path=$_SERVER['DOCUMENT_ROOT'].'/muscleFactory/assets/images/exercises/'.$filename;
+				unlink($path);	
 			
 
 			

@@ -36,14 +36,15 @@ color:white !important;
 		   <!-- <a class="toggleMenu" href="#">Menu</a> -->
 			 <ul class="nav">
 			   <li class="active"><a href="#">Home</a></li>
-			   <li><a href="<?php echo base_url();?>controlWelcome/goToLogin">Admin</a></li>
-			   <li><a href="<?php echo base_url();?>controlWelcome/goToLogin">Trainer</a></li>
+			   
+			   <!-- <li><a href="<?php echo base_url();?>controlWelcome/goToLogin">Trainer</a></li> -->
 			   <li><a href="classes.html">Classes</a>
 
 			   </li>
 			   <li><a href="blog.html">Blog</a></li>
 			   <li><a href="pricing.html">Pricing</a></li>
 			   <li><a href="contact.html">Contact</a></li>
+			   <li><a href="<?php echo base_url();?>controlWelcome/goToLogin" class="btn btn-success">login</a></li>
 			 </ul>
 			<!--   <script type="text/javascript" src="<?php echo base_url();?>assets/js/nav.js"></script> -->
 		  </div><!-- end h_menu4 -->
@@ -140,7 +141,7 @@ color:white !important;
      	 <a href="<?php echo base_url();?>controlVideo/getVideo">
      	 <h3 class="m_2">Videos</h3></a></div>
 
-	 	    	<div class="col-md-6 "><a href="<?php echo base_url();?>controlVideo/getVideo">
+	 	    	<div class="col-md-6 col-lg-offset-3"><a href="<?php echo base_url();?>controlVideo/getVideo">
 	 	    		<ul class="spinning">
 	 	    			<li class="live">click <span class="m_1">for more</span></li>
 	 	    			<li class="room">just chill</li>
@@ -171,36 +172,36 @@ color:white !important;
 	                  </div>
 			     </a></div>
 			   <!--   //another video -->
-			   	<div class="col-md-6 "><a href="<?php echo base_url();?>controlVideo/getVideo">
+			   <!-- 	<div class="col-md-6 "><a href="<?php echo base_url();?>controlVideo/getVideo">
 	 	    		<ul class="spinning">
 	 	    			<li class="live">click <span class="m_1">for more</span></li>
 	 	    			<li class="room">hudd hud dabang</li>
 	 	    			<div class="clear"></div>
 	 	    		</ul>
-					 <div class="view view-fifth card">
+					 <div class="view view-fifth card"> -->
 				  	   <!-- <img src="<?php echo base_url();?>assets/images/pic3.jpg" class="img-responsive" alt=""> -->
 
 				  	  <!--  ============================================ -->
 
-				  	  	<video  width="" height="350" controls>
-							  <source src="<?php echo base_url();?>assets/videos/video2.mp4" type="video/mp4">
+				  	  <!-- 	<video  width="" height="350" controls>
+							  <source src="<?php echo base_url();?>assets/videos/video2.mp4" type="video/mp4"> -->
 							<!--   <source src="<?php echo base_url();?>assets/videos/myvideo1.ogg" type="video/ogg">
 							  <source src="<?php echo base_url();?>assets/videos/myvideo1.webm" type="video/webm">
 							  <object data="<?php echo base_url();?>assets/videos/myvideo1.mp4"  height="350">
 							    <embed src="<?php echo base_url();?>assets/videos/myvideo1.swf"  height="350">
 							  </object>  -->
-							  Your browser does not support the video tag.
-							</video>
+							 <!--  Your browser does not support the video tag.
+							</video> -->
 
 						<!-- <canvas id="myCanvas" style="border:0px solid #FFF;"> 
 						</canvas>  -->
 
 				  	<!--    ============================================ -->
-					      <div class="mask">
+					     <!--  <div class="mask">
 	                       	<div class="info">view More</div>
 			              </div>
 	                  </div>
-			     </a></div>
+			     </a></div> -->
 
 
 <!-- ........................................................ -->
