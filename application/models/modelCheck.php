@@ -13,5 +13,16 @@ class ModelCheck extends CI_Model{
 
 	return $this->db->get('tblregister');
 	}
+
+	public function isUnameAvailable($uname){
+		$this->db->where('uname',$uname);
+		$query=$this->db->get('tblregister');
+
+		if($query->num_rows() >0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
 ?>

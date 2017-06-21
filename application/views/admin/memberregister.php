@@ -31,6 +31,9 @@
           <label for="uname">Username:</label>
           <input type="text" name="uname" class="form-control" id="uname" placeholder="please enter username" required="required">
         </div>
+        <div class="form-group">
+          <span id="unameresult"></span>
+        </div>
          <div class="form-group">
       <label for="pword">Password:</label>
       <input type="password" name="pword" onchange="checkLength()" class="form-control" id="pword"  placeholder="please enter password" required="required">
@@ -103,6 +106,29 @@
 </div>
 </div>
 </div>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $('#uname').change(function(){
+      alert();
+      var uname=$('#uname').val();
+      if(uname !="")
+      {
+        $.ajax({
+          url:"<?php echo base_url();?>controlCheck/checkUnameAvailability";
+          method:"POST",
+          data:{uname:uname},
+          success:function(data){
+            $('#unameresult').html(data);
+          }
+        });
+      }
+    });
+  });
+
+
+</script>
+
 <script type="text/javascript">
   function bmiCalculation(){
     

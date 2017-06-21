@@ -9,7 +9,7 @@
 <form class="" action="<?php echo base_url();?>controlExercise/newExercise" method="post" enctype="multipart/form-data" >
    <div class="form-group">
     <label for="eqname">Exercise Name:</label>
-    <input type="text" name="eqname" class="form-control" id="eqname" placeholder="please enter equipment name" required="required">
+    <input type="text" name="eqname" class="form-control" id="eqname" placeholder="please enter exercise name" required="required">
   </div>
 
 
@@ -47,7 +47,7 @@ foreach($eqclass->result() as $row){
     <textarea type="text" name="eqdetails" class="form-control" id="eqdetails" placeholder="please describe about exercise" required="required" style="height:100px;"></textarea>
   </div>
 <div class="panel panel-footer">
-<input type="submit" name="btnequipmentsubmit" value="submit" class="btn btn-success" >
+<input type="submit" name="btntreqsubmit" value="submit" class="btn btn-success" >
 </div>
 </form>
 </div>

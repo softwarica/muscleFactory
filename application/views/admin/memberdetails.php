@@ -1,3 +1,12 @@
+<?php
+
+if(!isset($this->session->userdata['sess_id'])) {
+
+  redirect('controlWelcome/goToLogin');
+}
+
+
+?>
 <?php $this->load->view('link');?>
 <?php $this->load->view('header');?>
 <div class="container-fluid">

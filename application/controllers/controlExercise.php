@@ -44,9 +44,13 @@ class ControlExercise extends CI_Controller{
 
 			// $data['eqinsertmsg']='data sucessfully insert into table equipment';
 			// $this->load->view('admin/adminPage',$data);
+			if(isset($_POST['btntreqsubmit'])){
+			$this->session->set_flashdata('eqinsertmsg','data sucessfully insert into table exercise');
+			redirect('controlWelcome/goToTrainer');
+		}else{
 			$this->session->set_flashdata('eqinsertmsg','data sucessfully insert into table exercise');
 			redirect('controlAdmin/index');
-
+		}
 				}
 
 

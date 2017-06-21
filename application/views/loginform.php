@@ -6,6 +6,10 @@
 			<div class="panel panel-default" style="margin-top:50px;">
 					<div class="panel panel-heading">
 						<h5 align="center" class="btn btn-link">login form</h5>
+						<h5 align="center" style="color:red">
+							<?php echo $this->session->flashDAta('loginmsg');?>
+
+						</h5>
 					</div>
 					<form class="" action="<?php echo base_url();?>controlCheck/checkForLogin" method="post" name="myForm">
 					<div class="panel panel-body" style="font-size: 12px;">

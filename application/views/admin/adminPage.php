@@ -1,5 +1,16 @@
+
+<?php
+
+if(!isset($this->session->userdata['sess_id'])) {
+
+  redirect('controlWelcome/goToLogin');
+}
+
+?>
 <html>
 <?php $this->load->view("link"); ?>
+
+
 <body>
 
 
@@ -40,7 +51,7 @@
                <li><a data-toggle="pill" href="#menu3">TRAINER LIST</a></li>
                 <li><a data-toggle="pill" href="#menu4">IMAGES LIST</a></li>
                  <li><a data-toggle="pill" href="#menu5">VIDEOS LIST</a></li>
-               <li><a data-toggle="pill" href="#menu6">LOGOUT</a></li>
+               <li><a href="<?php echo base_url();?>controlCheck/destroySession">LOGOUT</a></li>
              </ul>
                
              <script type="text/javascript" src="<?php echo base_url();?>assets/js/nav.js"></script>
@@ -145,12 +156,7 @@
               <div id="videoslistcontent"></div>
                </div>
 
-               <div id="menu6" class="tab-pane fade">
-                 <?php
-                 $this->load->view('admin/dashboard');
-                 ?>
 
-               </div>
              </div>
 
 
